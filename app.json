@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Cerca",
+    "slug": "cerca",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "cerca",
+    "userInterfaceStyle": "light",
+    "ios": { "supportsTablet": false },
+    "android": {},
+    "plugins": ["expo-router"]
+  }
+}

@@ -1,0 +1,25 @@
+Es el error de conflicto de dependencias que te adelantaba. No es un problema de tu proyecto: npm quiere traer react-dom@19.3, que choca con el react@19.2.3 que usa Expo, y por eso se frena. Se arregla con la opción --legacy-peer-deps.
+
+Corré esto en ~/cerca:
+
+bash
+npm install lucide-react-native @expo-google-fonts/inter @expo-google-fonts/poppins --legacy-peer-deps
+
+Para que no te lo vuelva a pedir cada vez, podés dejarlo guardado en el proyecto:
+
+bash
+echo "legacy-peer-deps=true" > .npmrc
+
+Cuando termine, chequeá que "main" esté bien:
+
+bash
+grep '"main"' package.json
+
+Tiene que decir "main": "expo-router/entry".
+
+Y arrancá:
+
+bash
+npx expo start -c
+
+Si te sale otro error, copiame el texto de la terminal, solo las últimas 20 líneas más o menos, y lo veo.
