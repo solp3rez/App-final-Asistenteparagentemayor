@@ -23,3 +23,8 @@ bash
 npx expo start -c
 
 Si te sale otro error, copiame el texto de la terminal, solo las últimas 20 líneas más o menos, y lo veo.
+. Instalá la librería
+
+bash
+cd ~/cerca
+npm install mqtt --legacy-peer-deps 

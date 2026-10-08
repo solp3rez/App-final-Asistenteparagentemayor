@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { enviar } from '../lib/mqtt-base'
 import {
   Image,
   KeyboardAvoidingView,
@@ -71,6 +72,12 @@ export function MessageCompose() {
 
   async function handleSubmit() {
     if (!canSend) return
+    if (when === 'now' && mode === 'text') {
+  if (!enviar('/prueba', message.trim())) {
+    Alert.alert('No se pudo enviar', 'No hay conexión con el broker MQTT.')
+    return
+  }
+}
     if (when === 'schedule') {
       const person = people.find((p) => p.id === recipient)
       await addScheduled({
