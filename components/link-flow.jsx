@@ -14,7 +14,6 @@ import { colors, fonts, radius, cardStyle, alpha } from '../lib/theme'
 import { getAvatar } from '../lib/avatars'
 import { IconBox } from './ui/icon-box'
 
-// LinkedPerson = { name, relation, avatar (clave) }
 const candidates = [
   { name: 'Rosa', relation: 'Mamá', avatar: 'rosa' },
   { name: 'Carlos', relation: 'Papá', avatar: 'carlos' },

@@ -69,7 +69,7 @@ export function ScheduledMessages() {
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <ScreenHeader
         title="Mensajes programados"
-        subtitle="Se reproducen solos en el parlante"
+        subtitle="Se reproducen en el parlante de tu ser querido"
         backHref="/home"
       />
 

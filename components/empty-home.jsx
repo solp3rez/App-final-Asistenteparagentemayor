@@ -12,8 +12,7 @@ export function EmptyHome({ onStart }) {
 
       <Text style={styles.title}>Todavía no hay nada vinculado</Text>
       <Text style={styles.text}>
-        Para empezar, conectá tu parlante y vinculá a la persona que vas a acompañar. Cuando esté
-        todo listo, vas a verla acá.
+        Para empezar, conectá tu parlante y vinculá a la persona que vas a acompañar.
       </Text>
 
       <View style={styles.steps}>

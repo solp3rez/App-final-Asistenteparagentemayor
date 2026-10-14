@@ -19,16 +19,6 @@ export function SpeakerStatusCard() {
             </View>
           </View>
         </View>
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel="Ver detalle del dispositivo"
-          style={({ pressed }) => [
-            styles.chevron,
-            pressed && { backgroundColor: colors.accent },
-          ]}
-        >
-          <ChevronRight size={20} color={colors.mutedForeground} />
-        </Pressable>
       </View>
 
       <View style={styles.stats}>

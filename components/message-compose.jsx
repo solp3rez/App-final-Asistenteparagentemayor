@@ -45,9 +45,9 @@ export function MessageCompose() {
   const router = useRouter()
   const insets = useSafeAreaInsets()
   const [recipient, setRecipient] = useState('rosa')
-  const [mode, setMode] = useState('text') // 'text' | 'voice'
+  const [mode, setMode] = useState('text') 
   const [message, setMessage] = useState('')
-  const [when, setWhen] = useState('now') // 'now' | 'schedule'
+  const [when, setWhen] = useState('now') 
   const [date, setDate] = useState('')
   const [time, setTime] = useState('')
   const [repeat, setRepeat] = useState('once')
@@ -56,8 +56,6 @@ export function MessageCompose() {
 
   useEffect(() => () => clearTimeout(timer.current), [])
 
-  // Al elegir "Programar" dejamos día y hora precargados (hoy, dentro de una hora),
-  // porque el selector nativo siempre muestra un valor.
   function chooseWhen(next) {
     setWhen(next)
     if (next === 'schedule' && (!date || !time)) {
@@ -169,7 +167,6 @@ export function MessageCompose() {
             </View>
           </View>
 
-          {/* Tipo de mensaje */}
           <View>
             <Text style={styles.sectionTitle}>Tipo de mensaje</Text>
             <Segmented

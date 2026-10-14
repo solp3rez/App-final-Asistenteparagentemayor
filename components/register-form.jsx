@@ -17,7 +17,7 @@ import { TextField } from './ui/text-field'
 import { ScreenHeader } from './screen-header'
 import { pbRequest } from '../lib/pocketbase'
 
-const relaciones = ['Hijo/a', 'Nieto/a', 'Sobrino/a', 'Cuidador/a', 'Otro']
+const relaciones = ['Hijo/a', 'Nieto/a', 'Sobrino/a', 'Cuidador/a', 'Otro', 'mr.jijijija']
 
 export function RegisterForm() {
   const router = useRouter()

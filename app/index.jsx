@@ -64,7 +64,7 @@ export default function WelcomePage() {
       </ScrollView>
 
       <View style={[styles.footer, { paddingBottom: insets.bottom + 16 }]}>
-        <Button label= "Enviar Mensaje al Brokerrrrr" onPress={() => enviar('/topicdeprueba', 'holaaaaa este es un mensaje de la app papi')}/>
+        <Button label= "Enviar Mensaje al Brokerrrrr" onPress={() => enviar('/topicdeprueba', 'jijijija')}/>
         <Button label="Crear cuenta" onPress={() => router.push('/registro')} />
         <Button
           label="Ya tengo cuenta"

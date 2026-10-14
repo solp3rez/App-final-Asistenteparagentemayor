@@ -8,10 +8,6 @@ const variants = {
   warn: { bg: colors.warn, fg: colors.warnForeground },
 }
 
-/**
- * Reemplazo del <Button> de shadcn/base-ui.
- * Props: label, onPress, variant, height, radius, fontSize, weight, icon (componente lucide), disabled, style
- */
 export function Button({
   label,
   onPress,

@@ -55,7 +55,6 @@ export function SettingsView() {
         contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32, gap: 24 }}
         showsVerticalScrollIndicator={false}
       >
-        {/* Persona vinculada */}
         <View>
           <Text style={styles.sectionTitle}>Persona vinculada</Text>
           {ready && person ? (
@@ -125,8 +124,6 @@ export function SettingsView() {
           </View>
         </View>
       </ScrollView>
-
-      {/* Confirmación de desvinculación */}
       <Modal
         visible={confirmUnlink}
         transparent
