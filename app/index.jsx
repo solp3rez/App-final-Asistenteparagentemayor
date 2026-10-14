@@ -5,6 +5,7 @@ import { ShieldCheck, MessageCircleHeart, BellRing } from 'lucide-react-native'
 import { colors, fonts, radius } from '../lib/theme'
 import { Button } from '../components/ui/button'
 import { IconBox } from '../components/ui/icon-box'
+import { enviar } from '../lib/mqtt-base'
 
 const highlights = [
   { icon: MessageCircleHeart, label: 'Enviá mensajes de voz al parlante del hogar' },
@@ -63,6 +64,7 @@ export default function WelcomePage() {
       </ScrollView>
 
       <View style={[styles.footer, { paddingBottom: insets.bottom + 16 }]}>
+        <Button label= "Enviar Mensaje al Brokerrrrr" onPress={() => enviar('/topicdeprueba', 'holaaaaa este es un mensaje de la app papi')}/>
         <Button label="Crear cuenta" onPress={() => router.push('/registro')} />
         <Button
           label="Ya tengo cuenta"
