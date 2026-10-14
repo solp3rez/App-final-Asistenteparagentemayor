@@ -15,6 +15,7 @@ import { colors, fonts } from '../lib/theme'
 import { Button } from './ui/button'
 import { TextField } from './ui/text-field'
 import { ScreenHeader } from './screen-header'
+import { pbRequest } from '../lib/pocketbase'
 
 const relaciones = ['Hijo/a', 'Nieto/a', 'Sobrino/a', 'Cuidador/a', 'Otro']
 
@@ -28,6 +29,8 @@ export function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [relacion, setRelacion] = useState('')
   const [accepted, setAccepted] = useState(false)
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
 
   // En la web esto lo validaba el navegador (required / minLength); acá lo hacemos a mano
   const valid =
@@ -38,9 +41,36 @@ export function RegisterForm() {
     accepted &&
     !!relacion
 
-  function handleSubmit() {
-    if (!valid) return
-    router.replace('/home')
+  async function handleSubmit() {
+    if (!valid || loading) return
+
+    setError('')
+    setLoading(true)
+
+    try {
+      await pbRequest('users', {
+        method: 'POST',
+        body: {
+          email: email.trim().toLowerCase(),
+          password,
+          passwordConfirm: password,
+          nombre: nombre.trim(),
+          telefono: telefono.trim(),
+          relacion,
+        },
+      })
+
+      router.replace('/home')
+    } catch (e) {
+      console.error('Error al registrar usuario:', e)
+      setError(
+        String(e.message || '').includes('Failed to fetch')
+          ? 'No se pudo conectar con PocketBase. Revisá que el servidor esté encendido y el celular esté en la misma red.'
+          : 'No se pudo crear la cuenta. Revisá el correo, los campos de PocketBase y sus permisos.'
+      )
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
@@ -173,10 +203,13 @@ export function RegisterForm() {
         </View>
 
         <View style={{ marginTop: 24, gap: 12 }}>
+          {error ? (
+            <Text style={{ color: '#B42318', fontSize: 14 }}>{error}</Text>
+          ) : null}
           <Button
-            label="Crear cuenta"
+            label={loading ? 'Creando cuenta...' : 'Crear cuenta'}
             onPress={handleSubmit}
-            disabled={!valid}
+            disabled={!valid || loading}
             height={52}
             radius={32}
             fontSize={16}

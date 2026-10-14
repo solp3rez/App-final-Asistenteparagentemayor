@@ -70,7 +70,7 @@ export default function WelcomePage() {
           label="Ya tengo cuenta"
           variant="ghost"
           height={48}
-          onPress={() => router.push('/home')}
+          onPress={() => router.push('/login')}
         />
       </View>
     </View>
