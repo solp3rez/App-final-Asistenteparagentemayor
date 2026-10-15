@@ -2,10 +2,10 @@ import { Image, ScrollView, Text, View, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 import { ShieldCheck, MessageCircleHeart, BellRing } from 'lucide-react-native'
-import { colors, fonts, radius } from '../lib/theme'
-import { Button } from '../components/ui/button'
-import { IconBox } from '../components/ui/icon-box'
-import { enviar } from '../lib/mqtt-base'
+import { colors, fonts, radius } from '../lib/tema'
+import { Button } from '../components/ui/boton'
+import { IconBox } from '../components/ui/caja-icono'
+import { enviar } from '../lib/conexion-mqtt'
 
 const highlights = [
   { icon: MessageCircleHeart, label: 'Enviá mensajes de voz al parlante del hogar' },
@@ -70,7 +70,7 @@ export default function WelcomePage() {
           label="Ya tengo cuenta"
           variant="ghost"
           height={48}
-          onPress={() => router.push('/login')}
+          onPress={() => router.push('/iniciar-sesion')}
         />
       </View>
     </View>

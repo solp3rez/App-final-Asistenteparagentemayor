@@ -1,8 +1,8 @@
 import { View } from 'react-native'
 import { Tabs } from 'expo-router'
 import { Home, MessageSquare, Bell, Settings } from 'lucide-react-native'
-import { colors, fonts } from '../../lib/theme'
-import { useTabBarStyle } from '../../lib/tab-bar-style'
+import { colors, fonts } from '../../lib/tema'
+import { useTabBarStyle } from '../../lib/estilo-barra-pestanas'
 
 // La barra inferior (BottomTabBar) ahora la maneja Expo Router con <Tabs>
 function TabIcon({ icon: Icon, color, badge }) {
@@ -43,7 +43,7 @@ export default function TabsLayout() {
       }}
     >
       <Tabs.Screen
-        name="home"
+        name="inicio"
         options={{
           title: 'Inicio',
           tabBarIcon: ({ color }) => <TabIcon icon={Home} color={color} />,

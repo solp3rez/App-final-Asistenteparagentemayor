@@ -1,8 +1,8 @@
 import { Linking, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native'
 import { TriangleAlert, CheckCircle2, PhoneCall } from 'lucide-react-native'
-import { colors, fonts, radius, alpha, cardStyle } from '../../lib/theme'
-import { IconBox } from '../../components/ui/icon-box'
-import { ScreenHeader } from '../../components/screen-header'
+import { colors, fonts, radius, alpha, cardStyle } from '../../lib/tema'
+import { IconBox } from '../../components/ui/caja-icono'
+import { ScreenHeader } from '../../components/encabezado-pantalla'
 
 const alerts = [
   { id: '1', person: 'Rosa', kind: 'help', text: 'Pidió ayuda desde el parlante.', time: 'Hace 5 min' },
@@ -13,7 +13,7 @@ const alerts = [
 export default function AlertasPage() {
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
-      <ScreenHeader title="Alertas" subtitle="Avisos del parlante" backHref="/home" />
+      <ScreenHeader title="Alertas" subtitle="Avisos del parlante" backHref="/inicio" />
 
       <ScrollView
         contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32, gap: 12 }}

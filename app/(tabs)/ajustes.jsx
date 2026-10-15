@@ -1,4 +1,4 @@
-import { SettingsView } from '../../components/settings-view'
+import { SettingsView } from '../../components/vista-ajustes'
 
 export default function AjustesPage() {
   return <SettingsView />

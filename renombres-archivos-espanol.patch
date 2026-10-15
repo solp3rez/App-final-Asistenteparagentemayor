@@ -1,0 +1,728 @@
+diff --git a/MAPA-ARCHIVOS.md b/MAPA-ARCHIVOS.md
+new file mode 100644
+index 00000000..78d0aaff
+--- /dev/null
++++ b/MAPA-ARCHIVOS.md
+@@ -0,0 +1,46 @@
++# Mapa de archivos del proyecto Cerca
++
++Este documento sirve para encontrar cada parte de la app. Los nombres `index.jsx` y `_layout.jsx` se mantienen porque Expo Router los usa para la pantalla inicial y la estructura de navegación.
++
++## Pantallas (`app/`)
++
++- `index.jsx`: bienvenida y botones para entrar o crear una cuenta.
++- `iniciar-sesion.jsx`: formulario y conexión del inicio de sesión.
++- `registro.jsx`: pantalla para crear una cuenta.
++- `mensaje.jsx`: pantalla para redactar y enviar o programar un mensaje.
++- `(tabs)/inicio.jsx`: pantalla principal después de entrar.
++- `(tabs)/programados.jsx`: lista de mensajes programados.
++- `(tabs)/alertas.jsx`: pantalla de alertas.
++- `(tabs)/ajustes.jsx`: ajustes y vínculos.
++- `_layout.jsx` y `(tabs)/_layout.jsx`: configuración de navegación de Expo Router; no renombrar.
++
++## Partes visuales reutilizables (`components/`)
++
++- `aviso-alerta.jsx`: aviso destacado de ayuda.
++- `inicio-vacio.jsx`: contenido de inicio cuando todavía no hay una persona vinculada.
++- `encabezado-inicio.jsx`: encabezado de la pantalla principal.
++- `flujo-vinculacion.jsx`: pasos para vincular a una persona.
++- `personas-vinculadas.jsx`: muestra las personas vinculadas.
++- `redactar-mensaje.jsx`: formulario para enviar o programar un mensaje.
++- `acciones-rapidas.jsx`: accesos rápidos de la pantalla principal.
++- `actividad-reciente.jsx`: muestra la actividad reciente; actualmente usa datos de ejemplo.
++- `formulario-registro.jsx`: campos y envío del registro de usuario.
++- `mensajes-programados.jsx`: muestra, modifica y elimina mensajes programados.
++- `encabezado-pantalla.jsx`: encabezado reutilizable de pantallas.
++- `vista-ajustes.jsx`: contenido de ajustes.
++- `estado-parlante.jsx`: tarjeta con el estado del parlante.
++- `ui/boton.jsx`, `ui/campo-fecha-hora.jsx`, `ui/caja-icono.jsx`, `ui/campo-texto.jsx`: controles visuales reutilizables.
++
++## Conexiones y funciones (`lib/`)
++
++- `conexion-pocketbase.js`: solicitudes de la app al servidor PocketBase.
++- `conexion-mqtt.js`: conexión MQTT y envío/recepción de mensajes.
++- `persona.js`: operaciones de personas vinculadas.
++- `recordatorios.js`: operaciones locales de mensajes programados.
++- `avatares.js`: selección de imágenes de avatar.
++- `estilo-barra-pestanas.js`: estilo de la barra inferior.
++- `tema.js`: colores, fuentes y estilos compartidos.
++
++## Importante
++
++Los archivos `.respaldo` son copias antiguas; no son parte del funcionamiento normal de la app. Renombrar un archivo no cambia automáticamente lo que hace el código: los imports se actualizaron junto con estos nombres. La app debe probarse antes de dar el cambio por terminado.
+diff --git a/app/(tabs)/_layout.jsx b/app/(tabs)/_layout.jsx
+index 74759660..2faf5a22 100644
+--- a/app/(tabs)/_layout.jsx
++++ b/app/(tabs)/_layout.jsx
+@@ -1,8 +1,8 @@
+ import { View } from 'react-native'
+ import { Tabs } from 'expo-router'
+ import { Home, MessageSquare, Bell, Settings } from 'lucide-react-native'
+-import { colors, fonts } from '../../lib/theme'
+-import { useTabBarStyle } from '../../lib/tab-bar-style'
++import { colors, fonts } from '../../lib/tema'
++import { useTabBarStyle } from '../../lib/estilo-barra-pestanas'
+ 
+ // La barra inferior (BottomTabBar) ahora la maneja Expo Router con <Tabs>
+ function TabIcon({ icon: Icon, color, badge }) {
+@@ -43,7 +43,7 @@ export default function TabsLayout() {
+       }}
+     >
+       <Tabs.Screen
+-        name="home"
++        name="inicio"
+         options={{
+           title: 'Inicio',
+           tabBarIcon: ({ color }) => <TabIcon icon={Home} color={color} />,
+diff --git a/app/(tabs)/ajustes.jsx b/app/(tabs)/ajustes.jsx
+index 5e82bdb9..409073f1 100644
+--- a/app/(tabs)/ajustes.jsx
++++ b/app/(tabs)/ajustes.jsx
+@@ -1,4 +1,4 @@
+-import { SettingsView } from '../../components/settings-view'
++import { SettingsView } from '../../components/vista-ajustes'
+ 
+ export default function AjustesPage() {
+   return <SettingsView />
+diff --git a/app/(tabs)/alertas.jsx b/app/(tabs)/alertas.jsx
+index bb01dfa0..ebf9e460 100644
+--- a/app/(tabs)/alertas.jsx
++++ b/app/(tabs)/alertas.jsx
+@@ -1,8 +1,8 @@
+ import { Linking, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native'
+ import { TriangleAlert, CheckCircle2, PhoneCall } from 'lucide-react-native'
+-import { colors, fonts, radius, alpha, cardStyle } from '../../lib/theme'
+-import { IconBox } from '../../components/ui/icon-box'
+-import { ScreenHeader } from '../../components/screen-header'
++import { colors, fonts, radius, alpha, cardStyle } from '../../lib/tema'
++import { IconBox } from '../../components/ui/caja-icono'
++import { ScreenHeader } from '../../components/encabezado-pantalla'
+ 
+ const alerts = [
+   { id: '1', person: 'Rosa', kind: 'help', text: 'Pidió ayuda desde el parlante.', time: 'Hace 5 min' },
+@@ -13,7 +13,7 @@ const alerts = [
+ export default function AlertasPage() {
+   return (
+     <View style={{ flex: 1, backgroundColor: colors.background }}>
+-      <ScreenHeader title="Alertas" subtitle="Avisos del parlante" backHref="/home" />
++      <ScreenHeader title="Alertas" subtitle="Avisos del parlante" backHref="/inicio" />
+ 
+       <ScrollView
+         contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32, gap: 12 }}
+diff --git a/app/(tabs)/home.jsx b/app/(tabs)/inicio.jsx
+similarity index 81%
+rename from app/(tabs)/home.jsx
+rename to app/(tabs)/inicio.jsx
+index 7fe0a789..95381440 100644
+--- a/app/(tabs)/home.jsx
++++ b/app/(tabs)/inicio.jsx
+@@ -1,17 +1,17 @@
+ import { useCallback, useEffect, useState } from 'react'
+ import { ActivityIndicator, ScrollView, View } from 'react-native'
+ import { useFocusEffect, useNavigation, useRouter } from 'expo-router'
+-import { colors } from '../../lib/theme'
+-import { getLinkedPerson, saveLinkedPerson } from '../../lib/person'
+-import { useTabBarStyle } from '../../lib/tab-bar-style'
+-import { HomeHeader } from '../../components/home-header'
+-import { AlertBanner } from '../../components/alert-banner'
+-import { SpeakerStatusCard } from '../../components/speaker-status-card'
+-import { QuickActions } from '../../components/quick-actions'
+-import { LinkedPeople } from '../../components/linked-people'
+-import { RecentActivity } from '../../components/recent-activity'
+-import { EmptyHome } from '../../components/empty-home'
+-import { LinkFlow } from '../../components/link-flow'
++import { colors } from '../../lib/tema'
++import { getLinkedPerson, saveLinkedPerson } from '../../lib/persona'
++import { useTabBarStyle } from '../../lib/estilo-barra-pestanas'
++import { HomeHeader } from '../../components/encabezado-inicio'
++import { AlertBanner } from '../../components/aviso-alerta'
++import { SpeakerStatusCard } from '../../components/estado-parlante'
++import { QuickActions } from '../../components/acciones-rapidas'
++import { LinkedPeople } from '../../components/personas-vinculadas'
++import { RecentActivity } from '../../components/actividad-reciente'
++import { EmptyHome } from '../../components/inicio-vacio'
++import { LinkFlow } from '../../components/flujo-vinculacion'
+ 
+ export default function HomePage() {
+   const router = useRouter()
+diff --git a/app/(tabs)/programados.jsx b/app/(tabs)/programados.jsx
+index 396a3c7a..a42330d6 100644
+--- a/app/(tabs)/programados.jsx
++++ b/app/(tabs)/programados.jsx
+@@ -1,4 +1,4 @@
+-import { ScheduledMessages } from '../../components/scheduled-messages'
++import { ScheduledMessages } from '../../components/mensajes-programados'
+ 
+ export default function ProgramadosPage() {
+   return <ScheduledMessages />
+diff --git a/app/_layout.jsx b/app/_layout.jsx
+index 272d7066..279b5e3c 100644
+--- a/app/_layout.jsx
++++ b/app/_layout.jsx
+@@ -5,8 +5,8 @@ import * as SplashScreen from 'expo-splash-screen'
+ import { SafeAreaProvider } from 'react-native-safe-area-context'
+ import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold } from '@expo-google-fonts/inter'
+ import { Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold } from '@expo-google-fonts/poppins'
+-import { colors } from '../lib/theme'
+-import '../lib/mqtt-base'
++import { colors } from '../lib/tema'
++import '../lib/conexion-mqtt'
+ 
+ SplashScreen.preventAutoHideAsync()
+ 
+diff --git a/app/index.jsx b/app/index.jsx
+index 84c8ceac..5961e806 100644
+--- a/app/index.jsx
++++ b/app/index.jsx
+@@ -2,10 +2,10 @@ import { Image, ScrollView, Text, View, StyleSheet } from 'react-native'
+ import { useRouter } from 'expo-router'
+ import { useSafeAreaInsets } from 'react-native-safe-area-context'
+ import { ShieldCheck, MessageCircleHeart, BellRing } from 'lucide-react-native'
+-import { colors, fonts, radius } from '../lib/theme'
+-import { Button } from '../components/ui/button'
+-import { IconBox } from '../components/ui/icon-box'
+-import { enviar } from '../lib/mqtt-base'
++import { colors, fonts, radius } from '../lib/tema'
++import { Button } from '../components/ui/boton'
++import { IconBox } from '../components/ui/caja-icono'
++import { enviar } from '../lib/conexion-mqtt'
+ 
+ const highlights = [
+   { icon: MessageCircleHeart, label: 'Enviá mensajes de voz al parlante del hogar' },
+@@ -70,7 +70,7 @@ export default function WelcomePage() {
+           label="Ya tengo cuenta"
+           variant="ghost"
+           height={48}
+-          onPress={() => router.push('/login')}
++          onPress={() => router.push('/iniciar-sesion')}
+         />
+       </View>
+     </View>
+diff --git a/app/login.jsx b/app/iniciar-sesion.jsx
+similarity index 95%
+rename from app/login.jsx
+rename to app/iniciar-sesion.jsx
+index 7f60e29c..15300749 100644
+--- a/app/login.jsx
++++ b/app/iniciar-sesion.jsx
+@@ -10,10 +10,10 @@ import {
+ } from 'react-native'
+ import { useRouter } from 'expo-router'
+ import { Eye, EyeOff } from 'lucide-react-native'
+-import { colors, fonts } from '../lib/theme'
+-import { Button } from '../components/ui/button'
+-import { TextField } from '../components/ui/text-field'
+-import { ScreenHeader } from '../components/screen-header'
++import { colors, fonts } from '../lib/tema'
++import { Button } from '../components/ui/boton'
++import { TextField } from '../components/ui/campo-texto'
++import { ScreenHeader } from '../components/encabezado-pantalla'
+ 
+ const POCKETBASE_URL = 'http://10.56.2.22:8090'
+ 
+@@ -58,7 +58,7 @@ export default function LoginPage() {
+         return
+       }
+ 
+-      router.replace('/home')
++      router.replace('/inicio')
+     } catch (e) {
+       console.error('Error al iniciar sesión:', e)
+       setError('No se pudo conectar con PocketBase. Revisá que esté encendido.')
+diff --git a/app/mensaje.jsx b/app/mensaje.jsx
+index db3a0697..746b23ed 100644
+--- a/app/mensaje.jsx
++++ b/app/mensaje.jsx
+@@ -1,4 +1,4 @@
+-import { MessageCompose } from '../components/message-compose'
++import { MessageCompose } from '../components/redactar-mensaje'
+ 
+ export default function MensajePage() {
+   return <MessageCompose />
+diff --git a/app/registro.jsx b/app/registro.jsx
+index f4fc08c1..87e2a0b8 100644
+--- a/app/registro.jsx
++++ b/app/registro.jsx
+@@ -1,4 +1,4 @@
+-import { RegisterForm } from '../components/register-form'
++import { RegisterForm } from '../components/formulario-registro'
+ 
+ export default function RegisterPage() {
+   return <RegisterForm />
+diff --git a/components/quick-actions.jsx b/components/acciones-rapidas.jsx
+similarity index 89%
+rename from components/quick-actions.jsx
+rename to components/acciones-rapidas.jsx
+index e053f3a2..efa1cef9 100644
+--- a/components/quick-actions.jsx
++++ b/components/acciones-rapidas.jsx
+@@ -1,13 +1,13 @@
+ import { Pressable, Text, View, StyleSheet } from 'react-native'
+ import { useRouter } from 'expo-router'
+ import { MessageCircle, Phone, BellRing } from 'lucide-react-native'
+-import { colors, fonts, radius, cardStyle } from '../lib/theme'
+-import { IconBox } from './ui/icon-box'
++import { colors, fonts, radius, cardStyle } from '../lib/tema'
++import { IconBox } from './ui/caja-icono'
+ 
+ const actions = [
+   { label: 'Enviar mensaje', icon: MessageCircle, bg: colors.primary, fg: colors.primaryForeground, href: '/mensaje' },
+-  { label: 'Llamar', icon: Phone, bg: colors.ok, fg: colors.okForeground, href: '/home' },
+-  { label: 'Alertas', icon: BellRing, bg: colors.warn, fg: colors.warnForeground, href: '/home' },
++  { label: 'Llamar', icon: Phone, bg: colors.ok, fg: colors.okForeground, href: '/inicio' },
++  { label: 'Alertas', icon: BellRing, bg: colors.warn, fg: colors.warnForeground, href: '/inicio' },
+ ]
+ 
+ export function QuickActions() {
+diff --git a/components/recent-activity.jsx b/components/actividad-reciente.jsx
+similarity index 98%
+rename from components/recent-activity.jsx
+rename to components/actividad-reciente.jsx
+index 31db6eef..fd6daa89 100644
+--- a/components/recent-activity.jsx
++++ b/components/actividad-reciente.jsx
+@@ -1,7 +1,7 @@
+ import { Pressable, Text, View, StyleSheet } from 'react-native'
+ import { TriangleAlert, MessageCircle, PhoneCall, Check } from 'lucide-react-native'
+-import { colors, fonts, radius, alpha, cardStyle } from '../lib/theme'
+-import { IconBox } from './ui/icon-box'
++import { colors, fonts, radius, alpha, cardStyle } from '../lib/tema'
++import { IconBox } from './ui/caja-icono'
+ 
+ const tones = {
+   warn: { bg: alpha(colors.warn, 0.12), fg: colors.warn },
+diff --git a/components/alert-banner.jsx b/components/aviso-alerta.jsx
+similarity index 96%
+rename from components/alert-banner.jsx
+rename to components/aviso-alerta.jsx
+index 1e3182d5..7de0a15c 100644
+--- a/components/alert-banner.jsx
++++ b/components/aviso-alerta.jsx
+@@ -1,7 +1,7 @@
+ import { Pressable, Text, View, StyleSheet } from 'react-native'
+ import { TriangleAlert, ChevronRight } from 'lucide-react-native'
+-import { colors, fonts, radius, alpha, shadowSm } from '../lib/theme'
+-import { IconBox } from './ui/icon-box'
++import { colors, fonts, radius, alpha, shadowSm } from '../lib/tema'
++import { IconBox } from './ui/caja-icono'
+ 
+ export function AlertBanner({ onPress }) {
+   return (
+diff --git a/components/home-header.jsx b/components/encabezado-inicio.jsx
+similarity index 96%
+rename from components/home-header.jsx
+rename to components/encabezado-inicio.jsx
+index e2a9a6ff..97cce1b1 100644
+--- a/components/home-header.jsx
++++ b/components/encabezado-inicio.jsx
+@@ -1,8 +1,8 @@
+ import { Image, Pressable, Text, View, StyleSheet } from 'react-native'
+ import { useSafeAreaInsets } from 'react-native-safe-area-context'
+ import { Bell } from 'lucide-react-native'
+-import { colors, fonts, alpha } from '../lib/theme'
+-import { getAvatar } from '../lib/avatars'
++import { colors, fonts, alpha } from '../lib/tema'
++import { getAvatar } from '../lib/avatares'
+ 
+ export function HomeHeader() {
+   const insets = useSafeAreaInsets()
+diff --git a/components/screen-header.jsx b/components/encabezado-pantalla.jsx
+similarity index 92%
+rename from components/screen-header.jsx
+rename to components/encabezado-pantalla.jsx
+index 4c028171..90e0eb71 100644
+--- a/components/screen-header.jsx
++++ b/components/encabezado-pantalla.jsx
+@@ -2,10 +2,10 @@ import { Pressable, Text, View, StyleSheet } from 'react-native'
+ import { useRouter } from 'expo-router'
+ import { useSafeAreaInsets } from 'react-native-safe-area-context'
+ import { ArrowLeft } from 'lucide-react-native'
+-import { colors, fonts } from '../lib/theme'
++import { colors, fonts } from '../lib/tema'
+ 
+ // Encabezado con botón "Volver" que se repetía en alertas, ajustes, programados, mensaje y registro
+-export function ScreenHeader({ title, subtitle, backHref = '/home' }) {
++export function ScreenHeader({ title, subtitle, backHref = '/inicio' }) {
+   const router = useRouter()
+   const insets = useSafeAreaInsets()
+ 
+diff --git a/components/speaker-status-card.jsx b/components/estado-parlante.jsx
+similarity index 96%
+rename from components/speaker-status-card.jsx
+rename to components/estado-parlante.jsx
+index 98197e85..f008a8e9 100644
+--- a/components/speaker-status-card.jsx
++++ b/components/estado-parlante.jsx
+@@ -1,7 +1,7 @@
+ import { Pressable, Text, View, StyleSheet } from 'react-native'
+ import { Speaker, Wifi, BatteryFull, ChevronRight } from 'lucide-react-native'
+-import { colors, fonts, radius, cardStyle } from '../lib/theme'
+-import { IconBox } from './ui/icon-box'
++import { colors, fonts, radius, cardStyle } from '../lib/tema'
++import { IconBox } from './ui/caja-icono'
+ 
+ export function SpeakerStatusCard() {
+   return (
+diff --git a/components/link-flow.jsx b/components/flujo-vinculacion.jsx
+similarity index 99%
+rename from components/link-flow.jsx
+rename to components/flujo-vinculacion.jsx
+index 3f154445..370445b2 100644
+--- a/components/link-flow.jsx
++++ b/components/flujo-vinculacion.jsx
+@@ -10,9 +10,9 @@ import {
+ } from 'react-native'
+ import { useSafeAreaInsets } from 'react-native-safe-area-context'
+ import { ArrowLeft, Speaker, Wifi, Check, UserPlus, PartyPopper } from 'lucide-react-native'
+-import { colors, fonts, radius, cardStyle, alpha } from '../lib/theme'
+-import { getAvatar } from '../lib/avatars'
+-import { IconBox } from './ui/icon-box'
++import { colors, fonts, radius, cardStyle, alpha } from '../lib/tema'
++import { getAvatar } from '../lib/avatares'
++import { IconBox } from './ui/caja-icono'
+ 
+ const candidates = [
+   { name: 'Rosa', relation: 'Mamá', avatar: 'rosa' },
+diff --git a/components/register-form.jsx b/components/formulario-registro.jsx
+similarity index 96%
+rename from components/register-form.jsx
+rename to components/formulario-registro.jsx
+index 4faca7a0..fc8bc310 100644
+--- a/components/register-form.jsx
++++ b/components/formulario-registro.jsx
+@@ -11,11 +11,11 @@ import {
+ import { useRouter } from 'expo-router'
+ import { useSafeAreaInsets } from 'react-native-safe-area-context'
+ import { Eye, EyeOff, Check } from 'lucide-react-native'
+-import { colors, fonts } from '../lib/theme'
+-import { Button } from './ui/button'
+-import { TextField } from './ui/text-field'
+-import { ScreenHeader } from './screen-header'
+-import { pbRequest } from '../lib/pocketbase'
++import { colors, fonts } from '../lib/tema'
++import { Button } from './ui/boton'
++import { TextField } from './ui/campo-texto'
++import { ScreenHeader } from './encabezado-pantalla'
++import { pbRequest } from '../lib/conexion-pocketbase'
+ 
+ const relaciones = ['Hijo/a', 'Nieto/a', 'Sobrino/a', 'Cuidador/a', 'Otro', 'mr.jijijija']
+ 
+@@ -60,7 +60,7 @@ export function RegisterForm() {
+         },
+       })
+ 
+-      router.replace('/home')
++      router.replace('/inicio')
+     } catch (e) {
+       console.error('Error al registrar usuario:', e)
+       setError(
+@@ -216,7 +216,7 @@ export function RegisterForm() {
+           />
+           <Text style={styles.login}>
+             ¿Ya tenés cuenta?{' '}
+-            <Text style={styles.loginLink} onPress={() => router.push('/home')}>
++            <Text style={styles.loginLink} onPress={() => router.push('/inicio')}>
+               Iniciar sesión
+             </Text>
+           </Text>
+diff --git a/components/register-form.jsx.respaldo b/components/formulario-registro.jsx.respaldo
+similarity index 100%
+rename from components/register-form.jsx.respaldo
+rename to components/formulario-registro.jsx.respaldo
+diff --git a/components/empty-home.jsx b/components/inicio-vacio.jsx
+similarity index 96%
+rename from components/empty-home.jsx
+rename to components/inicio-vacio.jsx
+index a414e7ff..1fd504e2 100644
+--- a/components/empty-home.jsx
++++ b/components/inicio-vacio.jsx
+@@ -1,7 +1,7 @@
+ import { Pressable, Text, View, StyleSheet } from 'react-native'
+ import { Speaker, UserPlus, ArrowRight, ShieldCheck } from 'lucide-react-native'
+-import { colors, fonts, radius, cardStyle } from '../lib/theme'
+-import { IconBox } from './ui/icon-box'
++import { colors, fonts, radius, cardStyle } from '../lib/tema'
++import { IconBox } from './ui/caja-icono'
+ 
+ export function EmptyHome({ onStart }) {
+   return (
+diff --git a/components/scheduled-messages.jsx b/components/mensajes-programados.jsx
+similarity index 97%
+rename from components/scheduled-messages.jsx
+rename to components/mensajes-programados.jsx
+index d53b479f..f3c8cb54 100644
+--- a/components/scheduled-messages.jsx
++++ b/components/mensajes-programados.jsx
+@@ -12,18 +12,18 @@ import {
+   X,
+   Plus,
+ } from 'lucide-react-native'
+-import { colors, fonts, radius, alpha, cardStyle } from '../lib/theme'
+-import { getAvatar } from '../lib/avatars'
++import { colors, fonts, radius, alpha, cardStyle } from '../lib/tema'
++import { getAvatar } from '../lib/avatares'
+ import {
+   getScheduled,
+   removeScheduled,
+   updateScheduled,
+   formatWhen,
+   repeatLabels,
+-} from '../lib/scheduled'
+-import { Button } from './ui/button'
+-import { DateTimeField } from './ui/date-time-field'
+-import { ScreenHeader } from './screen-header'
++} from '../lib/recordatorios'
++import { Button } from './ui/boton'
++import { DateTimeField } from './ui/campo-fecha-hora'
++import { ScreenHeader } from './encabezado-pantalla'
+ 
+ export function ScheduledMessages() {
+   const router = useRouter()
+@@ -70,7 +70,7 @@ export function ScheduledMessages() {
+       <ScreenHeader
+         title="Mensajes programados"
+         subtitle="Se reproducen en el parlante de tu ser querido"
+-        backHref="/home"
++        backHref="/inicio"
+       />
+ 
+       <ScrollView
+diff --git a/components/linked-people.jsx b/components/personas-vinculadas.jsx
+similarity index 96%
+rename from components/linked-people.jsx
+rename to components/personas-vinculadas.jsx
+index a30129ae..f0da5df8 100644
+--- a/components/linked-people.jsx
++++ b/components/personas-vinculadas.jsx
+@@ -1,7 +1,7 @@
+ import { Image, Pressable, Text, View, StyleSheet } from 'react-native'
+ import { ChevronRight } from 'lucide-react-native'
+-import { colors, fonts, radius, cardStyle } from '../lib/theme'
+-import { getAvatar } from '../lib/avatars'
++import { colors, fonts, radius, cardStyle } from '../lib/tema'
++import { getAvatar } from '../lib/avatares'
+ 
+ // Person = { name, relation, avatar (clave), status: 'ok' | 'waiting' | 'help' }
+ const defaultPeople = [
+diff --git a/components/message-compose.jsx b/components/redactar-mensaje.jsx
+similarity index 97%
+rename from components/message-compose.jsx
+rename to components/redactar-mensaje.jsx
+index 0dfbb61d..abe38fb9 100644
+--- a/components/message-compose.jsx
++++ b/components/redactar-mensaje.jsx
+@@ -1,5 +1,5 @@
+ import { useEffect, useRef, useState } from 'react'
+-import { enviar } from '../lib/mqtt-base'
++import { enviar } from '../lib/conexion-mqtt'
+ import {
+   Image,
+   KeyboardAvoidingView,
+@@ -13,14 +13,14 @@ import {
+ import { useRouter } from 'expo-router'
+ import { useSafeAreaInsets } from 'react-native-safe-area-context'
+ import { Type, Mic, Play, CalendarClock, Check, Volume2 } from 'lucide-react-native'
+-import { colors, fonts, radius, alpha, shadowSm } from '../lib/theme'
+-import { getAvatar } from '../lib/avatars'
+-import { addScheduled, toDateString, toTimeString } from '../lib/scheduled'
+-import { Button } from './ui/button'
+-import { TextField } from './ui/text-field'
+-import { DateTimeField } from './ui/date-time-field'
+-import { IconBox } from './ui/icon-box'
+-import { ScreenHeader } from './screen-header'
++import { colors, fonts, radius, alpha, shadowSm } from '../lib/tema'
++import { getAvatar } from '../lib/avatares'
++import { addScheduled, toDateString, toTimeString } from '../lib/recordatorios'
++import { Button } from './ui/boton'
++import { TextField } from './ui/campo-texto'
++import { DateTimeField } from './ui/campo-fecha-hora'
++import { IconBox } from './ui/caja-icono'
++import { ScreenHeader } from './encabezado-pantalla'
+ 
+ const people = [
+   { id: 'rosa', name: 'Rosa', relation: 'Mamá', avatar: 'rosa' },
+@@ -92,7 +92,7 @@ export function MessageCompose() {
+     }
+     setSent(true)
+     timer.current = setTimeout(
+-      () => router.replace(when === 'schedule' ? '/programados' : '/home'),
++      () => router.replace(when === 'schedule' ? '/programados' : '/inicio'),
+       1600,
+     )
+   }
+@@ -123,7 +123,7 @@ export function MessageCompose() {
+       style={{ flex: 1, backgroundColor: colors.background }}
+       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+     >
+-      <ScreenHeader title="Enviar mensaje" subtitle="Se reproduce en el parlante" backHref="/home" />
++      <ScreenHeader title="Enviar mensaje" subtitle="Se reproduce en el parlante" backHref="/inicio" />
+ 
+       <ScrollView
+         keyboardShouldPersistTaps="handled"
+diff --git a/components/ui/button.jsx b/components/ui/boton.jsx
+similarity index 96%
+rename from components/ui/button.jsx
+rename to components/ui/boton.jsx
+index 57c838e4..9e4807bf 100644
+--- a/components/ui/button.jsx
++++ b/components/ui/boton.jsx
+@@ -1,5 +1,5 @@
+ import { Pressable, Text, StyleSheet } from 'react-native'
+-import { colors, fonts } from '../../lib/theme'
++import { colors, fonts } from '../../lib/tema'
+ 
+ const variants = {
+   default: { bg: colors.primary, fg: colors.primaryForeground },
+diff --git a/components/ui/icon-box.jsx b/components/ui/caja-icono.jsx
+similarity index 100%
+rename from components/ui/icon-box.jsx
+rename to components/ui/caja-icono.jsx
+diff --git a/components/ui/date-time-field.jsx b/components/ui/campo-fecha-hora.jsx
+similarity index 96%
+rename from components/ui/date-time-field.jsx
+rename to components/ui/campo-fecha-hora.jsx
+index 7b539e9e..b42d0245 100644
+--- a/components/ui/date-time-field.jsx
++++ b/components/ui/campo-fecha-hora.jsx
+@@ -1,14 +1,14 @@
+ import { useState } from 'react'
+ import { Platform, Pressable, Text, View, StyleSheet } from 'react-native'
+ import DateTimePicker from '@react-native-community/datetimepicker'
+-import { colors, fonts, radius } from '../../lib/theme'
++import { colors, fonts, radius } from '../../lib/tema'
+ import {
+   formatWhen,
+   parseDateString,
+   parseTimeString,
+   toDateString,
+   toTimeString,
+-} from '../../lib/scheduled'
++} from '../../lib/recordatorios'
+ 
+ /**
+  * Reemplazo de <input type="date"> y <input type="time">.
+diff --git a/components/ui/text-field.jsx b/components/ui/campo-texto.jsx
+similarity index 94%
+rename from components/ui/text-field.jsx
+rename to components/ui/campo-texto.jsx
+index d0232593..d838d651 100644
+--- a/components/ui/text-field.jsx
++++ b/components/ui/campo-texto.jsx
+@@ -1,6 +1,6 @@
+ import { useState } from 'react'
+ import { TextInput, StyleSheet } from 'react-native'
+-import { colors, fonts, radius } from '../../lib/theme'
++import { colors, fonts, radius } from '../../lib/tema'
+ 
+ // <input> / <textarea> con el estilo "focus:border-primary focus:bg-background"
+ export function TextField({ style, ...props }) {
+diff --git a/components/settings-view.jsx b/components/vista-ajustes.jsx
+similarity index 95%
+rename from components/settings-view.jsx
+rename to components/vista-ajustes.jsx
+index f16e5e71..23584e31 100644
+--- a/components/settings-view.jsx
++++ b/components/vista-ajustes.jsx
+@@ -12,12 +12,12 @@ import {
+   UserPlus,
+   X,
+ } from 'lucide-react-native'
+-import { colors, fonts, radius, alpha, cardStyle } from '../lib/theme'
+-import { getAvatar } from '../lib/avatars'
+-import { getLinkedPerson, clearLinkedPerson } from '../lib/person'
+-import { Button } from './ui/button'
+-import { IconBox } from './ui/icon-box'
+-import { ScreenHeader } from './screen-header'
++import { colors, fonts, radius, alpha, cardStyle } from '../lib/tema'
++import { getAvatar } from '../lib/avatares'
++import { getLinkedPerson, clearLinkedPerson } from '../lib/persona'
++import { Button } from './ui/boton'
++import { IconBox } from './ui/caja-icono'
++import { ScreenHeader } from './encabezado-pantalla'
+ 
+ export function SettingsView() {
+   const router = useRouter()
+@@ -44,12 +44,12 @@ export function SettingsView() {
+     await clearLinkedPerson()
+     setPerson(null)
+     setConfirmUnlink(false)
+-    router.navigate('/home')
++    router.navigate('/inicio')
+   }
+ 
+   return (
+     <View style={{ flex: 1, backgroundColor: colors.background }}>
+-      <ScreenHeader title="Ajustes" subtitle="Vínculos y preferencias" backHref="/home" />
++      <ScreenHeader title="Ajustes" subtitle="Vínculos y preferencias" backHref="/inicio" />
+ 
+       <ScrollView
+         contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32, gap: 24 }}
+@@ -80,7 +80,7 @@ export function SettingsView() {
+                   radius={radius.xl}
+                   fontSize={13}
+                   weight="medium"
+-                  onPress={() => router.navigate('/home')}
++                  onPress={() => router.navigate('/inicio')}
+                   style={{ flex: 1 }}
+                 />
+                 <Button
+@@ -106,7 +106,7 @@ export function SettingsView() {
+                   radius={radius.xl}
+                   fontSize={13}
+                   weight="medium"
+-                  onPress={() => router.navigate('/home')}
++                  onPress={() => router.navigate('/inicio')}
+                   style={{ marginTop: 12, alignSelf: 'center', paddingHorizontal: 20 }}
+                 />
+               </View>
+diff --git a/lib/avatars.js b/lib/avatares.js
+similarity index 100%
+rename from lib/avatars.js
+rename to lib/avatares.js
+diff --git a/lib/mqtt-base.js b/lib/conexion-mqtt.js
+similarity index 100%
+rename from lib/mqtt-base.js
+rename to lib/conexion-mqtt.js
+diff --git a/lib/pocketbase.js b/lib/conexion-pocketbase.js
+similarity index 100%
+rename from lib/pocketbase.js
+rename to lib/conexion-pocketbase.js
+diff --git a/lib/tab-bar-style.js b/lib/estilo-barra-pestanas.js
+similarity index 93%
+rename from lib/tab-bar-style.js
+rename to lib/estilo-barra-pestanas.js
+index 496e4c51..c6edc2a7 100644
+--- a/lib/tab-bar-style.js
++++ b/lib/estilo-barra-pestanas.js
+@@ -1,5 +1,5 @@
+ import { useSafeAreaInsets } from 'react-native-safe-area-context'
+-import { colors } from './theme'
++import { colors } from './tema'
+ 
+ // Estilo de la barra de pestañas, compartido entre el layout y la pantalla de inicio
+ // (que la oculta mientras se vincula el parlante).
+diff --git a/lib/person.js b/lib/persona.js
+similarity index 95%
+rename from lib/person.js
+rename to lib/persona.js
+index c3db058a..7c64171c 100644
+--- a/lib/person.js
++++ b/lib/persona.js
+@@ -1,4 +1,4 @@
+-import { pbRequest } from './pocketbase';
++import { pbRequest } from './conexion-pocketbase';
+ 
+ const COLLECTION = 'people';
+ 
+diff --git a/lib/person.js.respaldo b/lib/persona.js.respaldo
+similarity index 100%
+rename from lib/person.js.respaldo
+rename to lib/persona.js.respaldo
+diff --git a/lib/scheduled.js b/lib/recordatorios.js
+similarity index 100%
+rename from lib/scheduled.js
+rename to lib/recordatorios.js
+diff --git a/lib/theme.js b/lib/tema.js
+similarity index 100%
+rename from lib/theme.js
+rename to lib/tema.js
