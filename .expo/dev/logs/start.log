@@ -6462,3 +6462,1816 @@
 {"_e":"metro:client_log","_t":1792006549846,"level":"log","data":["Reconectando…"]}
 {"_e":"metro:client_log","_t":1792006550754,"level":"log","data":["Conectado al broker"]}
 >>>>>>> c0ee1c29 (hice un poico dela estetica)
+{"_e":"root:init","_t":1792101359895,"format":"v0-jsonl","version":"57.0.28"}
+{"_e":"env:mode","_t":1792101359896,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1792101359897,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1792101360108,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1792101360348,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1792101360642,"plugins":[]}
+{"_e":"metro:instantiate","_t":1792101362829,"atlas":false,"workers":10,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1792101397701,"id":"1","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792101397701,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792101397703,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792101398114,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1792101398214,"id":"1","progress":0.1111111111111111,"total":12,"current":4}
+{"_e":"metro:bundling:progress","_t":1792101398321,"id":"1","progress":0.1111111111111111,"total":30,"current":4}
+{"_e":"metro:bundling:progress","_t":1792101398329,"id":"1","progress":0.1111111111111111,"total":30,"current":5}
+{"_e":"metro:bundling:progress","_t":1792101398429,"id":"1","progress":0.1111111111111111,"total":143,"current":11}
+{"_e":"metro:bundling:progress","_t":1792101398540,"id":"1","progress":0.1111111111111111,"total":167,"current":18}
+{"_e":"metro:bundling:progress","_t":1792101398642,"id":"1","progress":0.1111111111111111,"total":180,"current":26}
+{"_e":"metro:bundling:progress","_t":1792101398742,"id":"1","progress":0.1111111111111111,"total":189,"current":30}
+{"_e":"metro:bundling:progress","_t":1792101398845,"id":"1","progress":0.1111111111111111,"total":211,"current":43}
+{"_e":"metro:bundling:progress","_t":1792101398945,"id":"1","progress":0.1111111111111111,"total":231,"current":53}
+{"_e":"metro:bundling:progress","_t":1792101399045,"id":"1","progress":0.1111111111111111,"total":262,"current":85}
+{"_e":"metro:bundling:progress","_t":1792101399146,"id":"1","progress":0.17292422311538083,"total":303,"current":126}
+{"_e":"metro:bundling:progress","_t":1792101399251,"id":"1","progress":0.22897184752177732,"total":349,"current":167}
+{"_e":"metro:bundling:progress","_t":1792101399351,"id":"1","progress":0.24099173553719008,"total":440,"current":216}
+{"_e":"metro:bundling:progress","_t":1792101399454,"id":"1","progress":0.28792385484830463,"total":492,"current":264}
+{"_e":"metro:bundling:progress","_t":1792101399555,"id":"1","progress":0.3244929846938775,"total":560,"current":319}
+{"_e":"metro:bundling:progress","_t":1792101399655,"id":"1","progress":0.3244929846938775,"total":651,"current":366}
+{"_e":"metro:bundling:progress","_t":1792101399755,"id":"1","progress":0.35789165899846065,"total":682,"current":408}
+{"_e":"metro:bundling:progress","_t":1792101399856,"id":"1","progress":0.35789165899846065,"total":755,"current":441}
+{"_e":"metro:bundling:progress","_t":1792101399958,"id":"1","progress":0.3983865604533822,"total":789,"current":498}
+{"_e":"metro:bundling:progress","_t":1792101400058,"id":"1","progress":0.45165078507773615,"total":805,"current":541}
+{"_e":"metro:bundling:progress","_t":1792101400158,"id":"1","progress":0.5394464134971018,"total":821,"current":603}
+{"_e":"metro:bundling:progress","_t":1792101400259,"id":"1","progress":0.643058538057997,"total":838,"current":672}
+{"_e":"metro:bundling:progress","_t":1792101400358,"id":"1","progress":0.643058538057997,"total":912,"current":725}
+{"_e":"metro:bundling:progress","_t":1792101400458,"id":"1","progress":0.6612348483824001,"total":942,"current":766}
+{"_e":"metro:bundling:progress","_t":1792101400559,"id":"1","progress":0.709141274238227,"total":969,"current":816}
+{"_e":"metro:bundling:progress","_t":1792101400661,"id":"1","progress":0.7228307771502974,"total":1028,"current":874}
+{"_e":"metro:bundling:progress","_t":1792101400761,"id":"1","progress":0.7693231698517013,"total":1066,"current":935}
+{"_e":"metro:bundling:progress","_t":1792101400861,"id":"1","progress":0.7693231698517013,"total":1120,"current":973}
+{"_e":"metro:bundling:progress","_t":1792101400962,"id":"1","progress":0.7925342058298632,"total":1148,"current":1022}
+{"_e":"metro:bundling:progress","_t":1792101401065,"id":"1","progress":0.8194037371986399,"total":1171,"current":1060}
+{"_e":"metro:bundling:progress","_t":1792101401165,"id":"1","progress":0.839638661788134,"total":1195,"current":1095}
+{"_e":"metro:bundling:progress","_t":1792101401265,"id":"1","progress":0.8577889998458909,"total":1219,"current":1129}
+{"_e":"metro:bundling:progress","_t":1792101401368,"id":"1","progress":0.8866105599999999,"total":1250,"current":1177}
+{"_e":"metro:bundling:progress","_t":1792101401468,"id":"1","progress":0.8866105599999999,"total":1294,"current":1207}
+{"_e":"metro:bundling:progress","_t":1792101401569,"id":"1","progress":0.900988124230857,"total":1319,"current":1252}
+{"_e":"metro:bundling:progress","_t":1792101401750,"id":"1","progress":0.9303148451406196,"total":1325,"current":1278}
+{"_e":"metro:bundling:progress","_t":1792101401886,"id":"1","progress":0.9303148451406196,"total":3218,"current":1279}
+{"_e":"metro:bundling:progress","_t":1792101402041,"id":"1","progress":0.9303148451406196,"total":3219,"current":1294}
+{"_e":"metro:bundling:progress","_t":1792101402150,"id":"1","progress":0.9303148451406196,"total":3223,"current":1300}
+{"_e":"metro:bundling:progress","_t":1792101402250,"id":"1","progress":0.9303148451406196,"total":3291,"current":1375}
+{"_e":"metro:bundling:progress","_t":1792101402351,"id":"1","progress":0.9303148451406196,"total":3291,"current":1461}
+{"_e":"metro:bundling:progress","_t":1792101402498,"id":"1","progress":0.9303148451406196,"total":3291,"current":1546}
+{"_e":"metro:bundling:progress","_t":1792101402600,"id":"1","progress":0.9303148451406196,"total":3292,"current":1586}
+{"_e":"metro:bundling:progress","_t":1792101402700,"id":"1","progress":0.9303148451406196,"total":3293,"current":1713}
+{"_e":"metro:bundling:progress","_t":1792101402800,"id":"1","progress":0.9303148451406196,"total":3293,"current":1838}
+{"_e":"metro:bundling:progress","_t":1792101402900,"id":"1","progress":0.9303148451406196,"total":3293,"current":1973}
+{"_e":"metro:bundling:progress","_t":1792101403000,"id":"1","progress":0.9303148451406196,"total":3293,"current":2103}
+{"_e":"metro:bundling:progress","_t":1792101403100,"id":"1","progress":0.9303148451406196,"total":3293,"current":2261}
+{"_e":"metro:bundling:progress","_t":1792101403200,"id":"1","progress":0.9303148451406196,"total":3293,"current":2369}
+{"_e":"metro:bundling:progress","_t":1792101403300,"id":"1","progress":0.9303148451406196,"total":3293,"current":2506}
+{"_e":"metro:bundling:progress","_t":1792101403400,"id":"1","progress":0.9303148451406196,"total":3293,"current":2647}
+{"_e":"metro:bundling:progress","_t":1792101403500,"id":"1","progress":0.9303148451406196,"total":3293,"current":2761}
+{"_e":"metro:bundling:progress","_t":1792101403600,"id":"1","progress":0.9303148451406196,"total":3293,"current":2908}
+{"_e":"metro:bundling:progress","_t":1792101403700,"id":"1","progress":0.9303148451406196,"total":3293,"current":3035}
+{"_e":"metro:bundling:progress","_t":1792101403800,"id":"1","progress":0.9303148451406196,"total":3293,"current":3141}
+{"_e":"metro:bundling:progress","_t":1792101403901,"id":"1","progress":0.9544151781506267,"total":3296,"current":3220}
+{"_e":"metro:bundling:progress","_t":1792101404001,"id":"1","progress":0.9779473325521129,"total":3337,"current":3300}
+{"_e":"metro:bundling:progress","_t":1792101404101,"id":"1","progress":0.9940846033332584,"total":3376,"current":3366}
+{"_e":"metro:bundling:progress","_t":1792101404201,"id":"1","progress":0.9940846033332584,"total":3467,"current":3425}
+{"_e":"metro:bundling:progress","_t":1792101404302,"id":"1","progress":0.9988509050072665,"total":3480,"current":3478}
+{"_e":"metro:bundling:progress","_t":1792101404413,"id":"1","progress":0.999,"total":3480,"current":3480}
+{"_e":"metro:bundling:done","_t":1792101404585,"id":"1","total":3480,"ms":6883.9221}
+{"_e":"metro:bundling:started","_t":1792101582875,"id":"2","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792101582875,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1792101582934,"id":"2","total":1,"ms":59.3341}
+{"_e":"root:init","_t":1792101646693,"format":"v0-jsonl","version":"57.0.28"}
+{"_e":"env:mode","_t":1792101646693,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1792101646695,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1792101646902,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1792101647136,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1792101647308,"plugins":[]}
+{"_e":"metro:instantiate","_t":1792101649393,"atlas":false,"workers":10,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1792101726588,"id":"1","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792101726589,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792101726592,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792101726692,"id":"1","progress":0.03962175153298444,"total":211,"current":42}
+{"_e":"metro:bundling:progress","_t":1792101726791,"id":"1","progress":0.18936292137630906,"total":347,"current":151}
+{"_e":"metro:bundling:progress","_t":1792101726891,"id":"1","progress":0.31704928661905224,"total":547,"current":308}
+{"_e":"metro:bundling:progress","_t":1792101726991,"id":"1","progress":0.35144705973004836,"total":781,"current":463}
+{"_e":"metro:bundling:progress","_t":1792101727091,"id":"1","progress":0.4897131567454985,"total":976,"current":683}
+{"_e":"metro:bundling:progress","_t":1792101727191,"id":"1","progress":0.7615943410356611,"total":1084,"current":946}
+{"_e":"metro:bundling:progress","_t":1792101727319,"id":"1","progress":0.7868885637406645,"total":1098,"current":974}
+{"_e":"metro:bundling:progress","_t":1792101727419,"id":"1","progress":0.7868885637406645,"total":3005,"current":1000}
+{"_e":"metro:bundling:progress","_t":1792101727560,"id":"1","progress":0.7868885637406645,"total":3005,"current":1001}
+{"_e":"metro:bundling:progress","_t":1792101727660,"id":"1","progress":0.7868885637406645,"total":3074,"current":1101}
+{"_e":"metro:bundling:progress","_t":1792101727760,"id":"1","progress":0.7868885637406645,"total":3074,"current":2447}
+{"_e":"metro:bundling:progress","_t":1792101727860,"id":"1","progress":0.9585438561270897,"total":3103,"current":3038}
+{"_e":"metro:bundling:progress","_t":1792101727966,"id":"1","progress":0.9585438561270897,"total":3339,"current":3201}
+{"_e":"metro:bundling:progress","_t":1792101728082,"id":"1","progress":0.999,"total":3480,"current":3480}
+{"_e":"metro:bundling:done","_t":1792101728160,"id":"1","total":3480,"ms":1571.7001}
+{"_e":"root:init","_t":1792101832057,"format":"v0-jsonl","version":"57.0.28"}
+{"_e":"env:mode","_t":1792101832057,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1792101832059,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1792101832263,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1792101832494,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1792101832669,"plugins":[]}
+{"_e":"metro:instantiate","_t":1792101835319,"atlas":false,"workers":10,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1792101845591,"id":"1","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792101845591,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792101845593,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792101846026,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1792101846126,"id":"1","progress":0.09,"total":6,"current":3}
+{"_e":"metro:bundling:progress","_t":1792101846238,"id":"1","progress":0.14792899408284024,"total":13,"current":5}
+{"_e":"metro:bundling:progress","_t":1792101846674,"id":"1","progress":0.21301775147928997,"total":13,"current":6}
+{"_e":"metro:bundling:progress","_t":1792101846774,"id":"1","progress":0.21301775147928997,"total":50,"current":19}
+{"_e":"metro:bundling:progress","_t":1792101846874,"id":"1","progress":0.21301775147928997,"total":75,"current":29}
+{"_e":"metro:bundling:progress","_t":1792101846974,"id":"1","progress":0.21301775147928997,"total":192,"current":41}
+{"_e":"metro:bundling:progress","_t":1792101847074,"id":"1","progress":0.21301775147928997,"total":275,"current":64}
+{"_e":"metro:bundling:progress","_t":1792101847175,"id":"1","progress":0.21301775147928997,"total":364,"current":86}
+{"_e":"metro:bundling:progress","_t":1792101847276,"id":"1","progress":0.21301775147928997,"total":382,"current":102}
+{"_e":"metro:bundling:progress","_t":1792101847376,"id":"1","progress":0.21301775147928997,"total":404,"current":120}
+{"_e":"metro:bundling:progress","_t":1792101847481,"id":"1","progress":0.21301775147928997,"total":450,"current":160}
+{"_e":"metro:bundling:progress","_t":1792101847582,"id":"1","progress":0.21301775147928997,"total":485,"current":201}
+{"_e":"metro:bundling:progress","_t":1792101847687,"id":"1","progress":0.2143036993679061,"total":553,"current":256}
+{"_e":"metro:bundling:progress","_t":1792101847788,"id":"1","progress":0.26100631577765987,"total":597,"current":305}
+{"_e":"metro:bundling:progress","_t":1792101847888,"id":"1","progress":0.3047439651112795,"total":663,"current":366}
+{"_e":"metro:bundling:progress","_t":1792101847988,"id":"1","progress":0.3484278549382716,"total":720,"current":425}
+{"_e":"metro:bundling:progress","_t":1792101848089,"id":"1","progress":0.37820075597327674,"total":761,"current":468}
+{"_e":"metro:bundling:progress","_t":1792101848189,"id":"1","progress":0.37820075597327674,"total":814,"current":500}
+{"_e":"metro:bundling:progress","_t":1792101848290,"id":"1","progress":0.40898705582846284,"total":835,"current":534}
+{"_e":"metro:bundling:progress","_t":1792101848391,"id":"1","progress":0.42966888302315476,"total":865,"current":567}
+{"_e":"metro:bundling:progress","_t":1792101848492,"id":"1","progress":0.4371883304965809,"total":915,"current":605}
+{"_e":"metro:bundling:progress","_t":1792101848593,"id":"1","progress":0.4578248206941248,"total":937,"current":634}
+{"_e":"metro:bundling:progress","_t":1792101848693,"id":"1","progress":0.4578248206941248,"total":1001,"current":671}
+{"_e":"metro:bundling:progress","_t":1792101848793,"id":"1","progress":0.4862682598244239,"total":1011,"current":705}
+{"_e":"metro:bundling:progress","_t":1792101848945,"id":"1","progress":0.4904155183192596,"total":1011,"current":708}
+{"_e":"metro:bundling:progress","_t":1792101849061,"id":"1","progress":0.4904155183192596,"total":2904,"current":709}
+{"_e":"metro:bundling:progress","_t":1792101849176,"id":"1","progress":0.4904155183192596,"total":2917,"current":727}
+{"_e":"metro:bundling:progress","_t":1792101849303,"id":"1","progress":0.4904155183192596,"total":2918,"current":734}
+{"_e":"metro:bundling:progress","_t":1792101849403,"id":"1","progress":0.4904155183192596,"total":2931,"current":792}
+{"_e":"metro:bundling:progress","_t":1792101849503,"id":"1","progress":0.4904155183192596,"total":2956,"current":852}
+{"_e":"metro:bundling:progress","_t":1792101849603,"id":"1","progress":0.4904155183192596,"total":2980,"current":904}
+{"_e":"metro:bundling:progress","_t":1792101849703,"id":"1","progress":0.4904155183192596,"total":3017,"current":970}
+{"_e":"metro:bundling:progress","_t":1792101849867,"id":"1","progress":0.4904155183192596,"total":3038,"current":1027}
+{"_e":"metro:bundling:progress","_t":1792101850006,"id":"1","progress":0.4904155183192596,"total":3039,"current":1133}
+{"_e":"metro:bundling:progress","_t":1792101850106,"id":"1","progress":0.4904155183192596,"total":3040,"current":1280}
+{"_e":"metro:bundling:progress","_t":1792101850206,"id":"1","progress":0.4904155183192596,"total":3040,"current":1417}
+{"_e":"metro:bundling:progress","_t":1792101850306,"id":"1","progress":0.4904155183192596,"total":3040,"current":1556}
+{"_e":"metro:bundling:progress","_t":1792101850406,"id":"1","progress":0.4904155183192596,"total":3040,"current":1719}
+{"_e":"metro:bundling:progress","_t":1792101850506,"id":"1","progress":0.4904155183192596,"total":3040,"current":1846}
+{"_e":"metro:bundling:progress","_t":1792101850606,"id":"1","progress":0.4904155183192596,"total":3040,"current":1944}
+{"_e":"metro:bundling:progress","_t":1792101850706,"id":"1","progress":0.4904155183192596,"total":3040,"current":2083}
+{"_e":"metro:bundling:progress","_t":1792101850806,"id":"1","progress":0.5328039516966759,"total":3040,"current":2219}
+{"_e":"metro:bundling:progress","_t":1792101850906,"id":"1","progress":0.5935080505540166,"total":3040,"current":2342}
+{"_e":"metro:bundling:progress","_t":1792101851006,"id":"1","progress":0.6628316525277009,"total":3040,"current":2475}
+{"_e":"metro:bundling:progress","_t":1792101851106,"id":"1","progress":0.7422049212257618,"total":3040,"current":2619}
+{"_e":"metro:bundling:progress","_t":1792101851206,"id":"1","progress":0.8338573407202216,"total":3040,"current":2776}
+{"_e":"metro:bundling:progress","_t":1792101851306,"id":"1","progress":0.9123219963516651,"total":3055,"current":2918}
+{"_e":"metro:bundling:progress","_t":1792101851406,"id":"1","progress":0.9226925019920952,"total":3094,"current":2972}
+{"_e":"metro:bundling:progress","_t":1792101851512,"id":"1","progress":0.9425536407327717,"total":3122,"current":3031}
+{"_e":"metro:bundling:progress","_t":1792101851614,"id":"1","progress":0.9556375143814778,"total":3165,"current":3094}
+{"_e":"metro:bundling:progress","_t":1792101851714,"id":"1","progress":0.9556375143814778,"total":3243,"current":3153}
+{"_e":"metro:bundling:progress","_t":1792101851814,"id":"1","progress":0.9556375143814778,"total":3321,"current":3219}
+{"_e":"metro:bundling:progress","_t":1792101851914,"id":"1","progress":0.9556375143814778,"total":3422,"current":3283}
+{"_e":"metro:bundling:progress","_t":1792101852014,"id":"1","progress":0.9556375143814778,"total":3438,"current":3354}
+{"_e":"metro:bundling:progress","_t":1792101852114,"id":"1","progress":0.9856344345866442,"total":3468,"current":3443}
+{"_e":"metro:bundling:progress","_t":1792101852214,"id":"1","progress":0.9988499138386615,"total":3477,"current":3475}
+{"_e":"metro:bundling:progress","_t":1792101852315,"id":"1","progress":0.999,"total":3477,"current":3476}
+{"_e":"metro:bundling:progress","_t":1792101852537,"id":"1","progress":0.999,"total":3477,"current":3477}
+{"_e":"metro:bundling:progress","_t":1792101852641,"id":"1","progress":0.999,"total":3480,"current":3480}
+{"_e":"metro:bundling:done","_t":1792101852822,"id":"1","total":3480,"ms":7231.4409}
+{"_e":"metro:client_log","_t":1792101889285,"level":"log","data":["mqtt exports:","[\"connect\", \"MqttClient\", \"Store\", \"default\"]","connect?","function"]}
+{"_e":"metro:client_log","_t":1792101899204,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101902169,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101910203,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101913191,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101921235,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101924221,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101932248,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101935238,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101943263,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101946252,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101954283,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101957379,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101965415,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101968406,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101976433,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101979475,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101987575,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792101990284,"level":"error","data":["Error al consultar personas:","[Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792101990675,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792101998566,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102001554,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102008372,"level":"error","data":["Error al guardar persona:","[Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102009575,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102010528,"level":"error","data":["[Error: Uncaught (in promise, id: 0) Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102010636,"level":"error","data":["Error al guardar persona:","[Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102011426,"level":"error","data":["Error al guardar persona:","[Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102011961,"level":"error","data":["Error al guardar persona:","[Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102012391,"level":"error","data":["Error al guardar persona:","[Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102012560,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102012649,"level":"error","data":["[Error: Uncaught (in promise, id: 1) Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102013436,"level":"error","data":["[Error: Uncaught (in promise, id: 2) Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102013972,"level":"error","data":["[Error: Uncaught (in promise, id: 3) Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102014405,"level":"error","data":["[Error: Uncaught (in promise, id: 4) Error: PocketBase: 404 {\"data\":{},\"message\":\"Missing or invalid collection context.\",\"status\":404}]","\n\n\u001b[1mCode: conexion-pocketbase.js\u001b[22m\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`PocketBase: ${response.status} ${await response.text()}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m   }\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m   \u001b[36mreturn\u001b[39m response\u001b[33m.\u001b[39mstatus \u001b[33m===\u001b[39m \u001b[35m204\u001b[39m \u001b[33m?\u001b[39m \u001b[36mnull\u001b[39m \u001b[33m:\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  pbRequest (lib\\conexion-pocketbase.js:14:20)\u001b[39m"]}
+{"_e":"metro:client_log","_t":1792102020599,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102023594,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102031623,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102034694,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102042756,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102045622,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102053916,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102056645,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102064669,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102067659,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102075680,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102078716,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102086726,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102089709,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102097939,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:bundling:started","_t":1792102704433,"id":"o","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792102704433,"id":"o","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102704436,"id":"o","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1792102704514,"id":"o","total":1,"ms":80.9814}
+{"_e":"metro:client_log","_t":1792102751560,"level":"log","data":["mqtt exports:","[\"connect\", \"MqttClient\", \"Store\", \"default\"]","connect?","function"]}
+{"_e":"metro:client_log","_t":1792102760096,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102762583,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102770635,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102773607,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102781629,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102784625,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102792955,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102795634,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102803656,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102806655,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102814681,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102817972,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102825994,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102828983,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102837016,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102840075,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102848034,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102851033,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102859042,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102863095,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102867381,"level":"warn","data":["La eliminación de personas todavía no está conectada a PocketBase."]}
+{"_e":"metro:client_log","_t":1792102871126,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102874484,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102882512,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102885500,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102893527,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102896516,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:bundling:started","_t":1792102900315,"id":"q","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792102900315,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102900679,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102900779,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102900879,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102900979,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102901079,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102901179,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102901286,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102901386,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102901486,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102901798,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102901898,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102901998,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102902098,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102902198,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792102902298,"id":"q","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1792102902444,"id":"q","total":1,"ms":2128.68}
+{"_e":"metro:client_log","_t":1792102950385,"level":"log","data":["mqtt exports:","[\"connect\", \"MqttClient\", \"Store\", \"default\"]","connect?","function"]}
+{"_e":"metro:client_log","_t":1792102957907,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102960343,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102968704,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102971516,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102979392,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102986030,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792102993834,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792102996647,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103004670,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103007676,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103015726,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103018681,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103026705,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103029688,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103037858,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103040955,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103048742,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103051732,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103059780,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103062763,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103070791,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103073768,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103081811,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103084977,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103093034,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103095827,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103103851,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103106853,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103114874,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103117864,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103125894,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103128887,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103137056,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103140154,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103147926,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103150922,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103158938,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103161933,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103169971,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103172956,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103180989,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103184175,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103192236,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103195001,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103203029,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103206020,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103214056,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103217045,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103225080,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103228064,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103236254,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103239087,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103247112,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103250111,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103258139,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103261123,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103269162,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103272214,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103280274,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103283198,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103291234,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103294175,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103303880,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103306495,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103314524,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103317525,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103325540,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103328537,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103336694,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103339793,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103347579,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103350567,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103358594,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103361590,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103369634,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103372625,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103380662,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103383814,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103391875,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103394676,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103402698,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103405708,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103413725,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103416712,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103424755,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103427736,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103435894,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103438995,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103446797,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103449784,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103457817,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103460830,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103468856,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103471837,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103479868,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103483016,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103491079,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103493907,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103501939,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103504927,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103512955,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103515963,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103524012,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103527002,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103535095,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103538194,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103546048,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103549039,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103557077,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103560075,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103568119,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103571111,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103579157,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103582215,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103590274,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103593162,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103601232,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103604176,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103612209,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103615198,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103623239,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103626233,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103634267,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103637255,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103645455,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103648271,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103656310,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103659301,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103667324,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103670328,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103678360,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103681354,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103689386,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103692576,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103700634,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103703392,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103711431,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103714408,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103722452,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103725437,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103733470,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103736458,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103744655,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103747481,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103755533,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103758527,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103766549,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103769543,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103777566,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103780557,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103788576,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103791774,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103799835,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103802612,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103810628,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103813621,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103821638,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792103824635,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792103832670,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:bundling:started","_t":1792104055972,"id":"r","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792104055972,"id":"r","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1792104056046,"id":"r","total":1,"ms":73.7637}
+{"_e":"metro:client_log","_t":1792104096003,"level":"log","data":["mqtt exports:","[\"connect\", \"MqttClient\", \"Store\", \"default\"]","connect?","function"]}
+{"_e":"metro:client_log","_t":1792104102395,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104105222,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104113260,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104116253,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104124271,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104127267,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104135284,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104138288,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104146414,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104149513,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104157345,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104160333,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104168359,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104171350,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104179379,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104182366,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104190396,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104193533,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104201594,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104204405,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104212436,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104215419,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104223453,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104226441,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104234476,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104237471,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104245614,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104248714,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104256514,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104259497,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104267535,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104270528,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104278555,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104281546,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104289570,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104292735,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104300794,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104303608,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104311636,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104314623,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104322639,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104325641,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104333672,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104336663,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104344815,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104347915,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104355726,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104358719,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104366741,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104369728,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104377769,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104380746,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104388834,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104391770,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792104399793,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792104402794,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:bundling:started","_t":1792104407593,"id":"s","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792104407593,"id":"s","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792104407595,"id":"s","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:failed","_t":1792104407603,"id":"s","message":"SyntaxError: C:\\Users\\falcondoble\\Documents\\App-final-Asistenteparagentemayor\\components\\flujo-vinculacion.jsx: Unexpected character '​'. (17:0)\n\n  15 | import { getAvatar } from '../lib/avatares'\n  16 | import { IconBox } from './ui/caja-icono'\n> 17 | ​\n     | ^\n  18 | // Son claves de dibujos locales, no personas ya registradas.\n  19 | const avatarOptions = ['rosa', 'carlos', 'ana']\n  20 | ​","importStack":null,"filename":"components\\flujo-vinculacion.jsx","targetModuleName":null,"originModulePath":null}
+{"_e":"root:init","_t":1792104755767,"format":"v0-jsonl","version":"57.0.28"}
+{"_e":"env:mode","_t":1792104755781,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1792104755793,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1792104760190,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1792104765763,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1792104768384,"plugins":[]}
+{"_e":"metro:instantiate","_t":1792104773259,"atlas":false,"workers":10,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1792104805175,"id":"1","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792104805175,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792104805179,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792104809384,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1792104809484,"id":"1","progress":0.09,"total":10,"current":3}
+{"_e":"metro:bundling:progress","_t":1792104809645,"id":"1","progress":0.1111111111111111,"total":18,"current":6}
+{"_e":"metro:bundling:progress","_t":1792104809749,"id":"1","progress":0.1111111111111111,"total":37,"current":9}
+{"_e":"metro:bundling:progress","_t":1792104809881,"id":"1","progress":0.1111111111111111,"total":44,"current":12}
+{"_e":"metro:bundling:progress","_t":1792104810134,"id":"1","progress":0.1111111111111111,"total":44,"current":13}
+{"_e":"metro:bundling:progress","_t":1792104810235,"id":"1","progress":0.19886778670562455,"total":74,"current":33}
+{"_e":"metro:bundling:progress","_t":1792104810335,"id":"1","progress":0.19886778670562455,"total":205,"current":44}
+{"_e":"metro:bundling:progress","_t":1792104810436,"id":"1","progress":0.19886778670562455,"total":242,"current":55}
+{"_e":"metro:bundling:progress","_t":1792104810652,"id":"1","progress":0.19886778670562455,"total":242,"current":56}
+{"_e":"metro:bundling:progress","_t":1792104810760,"id":"1","progress":0.19886778670562455,"total":256,"current":66}
+{"_e":"metro:bundling:progress","_t":1792104810883,"id":"1","progress":0.19886778670562455,"total":272,"current":76}
+{"_e":"metro:bundling:progress","_t":1792104810988,"id":"1","progress":0.19886778670562455,"total":298,"current":93}
+{"_e":"metro:bundling:progress","_t":1792104811089,"id":"1","progress":0.19886778670562455,"total":315,"current":109}
+{"_e":"metro:bundling:progress","_t":1792104811188,"id":"1","progress":0.19886778670562455,"total":369,"current":150}
+{"_e":"metro:bundling:progress","_t":1792104811290,"id":"1","progress":0.2352973936288706,"total":402,"current":195}
+{"_e":"metro:bundling:progress","_t":1792104811391,"id":"1","progress":0.2352973936288706,"total":526,"current":234}
+{"_e":"metro:bundling:progress","_t":1792104811491,"id":"1","progress":0.2352973936288706,"total":564,"current":266}
+{"_e":"metro:bundling:progress","_t":1792104811591,"id":"1","progress":0.24520011166137654,"total":622,"current":308}
+{"_e":"metro:bundling:progress","_t":1792104811696,"id":"1","progress":0.2594331382653507,"total":642,"current":327}
+{"_e":"metro:bundling:progress","_t":1792104811802,"id":"1","progress":0.27385154615862967,"total":665,"current":348}
+{"_e":"metro:bundling:progress","_t":1792104811910,"id":"1","progress":0.27542766691164,"total":665,"current":349}
+{"_e":"metro:bundling:progress","_t":1792104812016,"id":"1","progress":0.27542766691164,"total":686,"current":358}
+{"_e":"metro:bundling:progress","_t":1792104812129,"id":"1","progress":0.29848162240855197,"total":723,"current":395}
+{"_e":"metro:bundling:progress","_t":1792104812231,"id":"1","progress":0.3068144666196846,"total":742,"current":411}
+{"_e":"metro:bundling:progress","_t":1792104812331,"id":"1","progress":0.33301566967145246,"total":759,"current":438}
+{"_e":"metro:bundling:progress","_t":1792104812432,"id":"1","progress":0.3701079963567494,"total":789,"current":480}
+{"_e":"metro:bundling:progress","_t":1792104812531,"id":"1","progress":0.3701079963567494,"total":851,"current":505}
+{"_e":"metro:bundling:progress","_t":1792104812631,"id":"1","progress":0.3701079963567494,"total":911,"current":553}
+{"_e":"metro:bundling:progress","_t":1792104812732,"id":"1","progress":0.4187677794400412,"total":921,"current":596}
+{"_e":"metro:bundling:progress","_t":1792104812832,"id":"1","progress":0.45154975861089697,"total":942,"current":633}
+{"_e":"metro:bundling:progress","_t":1792104812936,"id":"1","progress":0.4941089966912343,"total":956,"current":672}
+{"_e":"metro:bundling:progress","_t":1792104813054,"id":"1","progress":0.5186984885500282,"total":965,"current":695}
+{"_e":"metro:bundling:progress","_t":1792104813160,"id":"1","progress":0.5493072942918105,"total":989,"current":733}
+{"_e":"metro:bundling:progress","_t":1792104813262,"id":"1","progress":0.5887522145171723,"total":997,"current":765}
+{"_e":"metro:bundling:progress","_t":1792104813362,"id":"1","progress":0.589467345223101,"total":999,"current":767}
+{"_e":"metro:bundling:progress","_t":1792104813466,"id":"1","progress":0.6054543204376128,"total":1005,"current":782}
+{"_e":"metro:bundling:progress","_t":1792104813568,"id":"1","progress":0.6054543204376128,"total":1019,"current":788}
+{"_e":"metro:bundling:progress","_t":1792104813672,"id":"1","progress":0.6054543204376128,"total":1019,"current":789}
+{"_e":"metro:bundling:progress","_t":1792104813774,"id":"1","progress":0.6054543204376128,"total":2912,"current":790}
+{"_e":"metro:bundling:progress","_t":1792104813874,"id":"1","progress":0.6054543204376128,"total":2913,"current":802}
+{"_e":"metro:bundling:progress","_t":1792104814036,"id":"1","progress":0.6054543204376128,"total":2913,"current":803}
+{"_e":"metro:bundling:progress","_t":1792104814137,"id":"1","progress":0.6054543204376128,"total":2922,"current":855}
+{"_e":"metro:bundling:progress","_t":1792104814240,"id":"1","progress":0.6054543204376128,"total":2952,"current":899}
+{"_e":"metro:bundling:progress","_t":1792104814345,"id":"1","progress":0.6054543204376128,"total":2970,"current":925}
+{"_e":"metro:bundling:progress","_t":1792104814447,"id":"1","progress":0.6054543204376128,"total":2983,"current":948}
+{"_e":"metro:bundling:progress","_t":1792104814550,"id":"1","progress":0.6054543204376128,"total":2992,"current":966}
+{"_e":"metro:bundling:progress","_t":1792104814654,"id":"1","progress":0.6054543204376128,"total":3011,"current":1017}
+{"_e":"metro:bundling:progress","_t":1792104814754,"id":"1","progress":0.6054543204376128,"total":3016,"current":1086}
+{"_e":"metro:bundling:progress","_t":1792104814854,"id":"1","progress":0.6054543204376128,"total":3016,"current":1164}
+{"_e":"metro:bundling:progress","_t":1792104814956,"id":"1","progress":0.6054543204376128,"total":3016,"current":1241}
+{"_e":"metro:bundling:progress","_t":1792104815058,"id":"1","progress":0.6054543204376128,"total":3016,"current":1305}
+{"_e":"metro:bundling:progress","_t":1792104815158,"id":"1","progress":0.6054543204376128,"total":3016,"current":1369}
+{"_e":"metro:bundling:progress","_t":1792104815259,"id":"1","progress":0.6054543204376128,"total":3016,"current":1446}
+{"_e":"metro:bundling:progress","_t":1792104815359,"id":"1","progress":0.6054543204376128,"total":3016,"current":1520}
+{"_e":"metro:bundling:progress","_t":1792104815460,"id":"1","progress":0.6054543204376128,"total":3016,"current":1591}
+{"_e":"metro:bundling:progress","_t":1792104815560,"id":"1","progress":0.6054543204376128,"total":3016,"current":1679}
+{"_e":"metro:bundling:progress","_t":1792104815660,"id":"1","progress":0.6054543204376128,"total":3016,"current":1754}
+{"_e":"metro:bundling:progress","_t":1792104815760,"id":"1","progress":0.6054543204376128,"total":3016,"current":1855}
+{"_e":"metro:bundling:progress","_t":1792104815860,"id":"1","progress":0.6054543204376128,"total":3016,"current":1955}
+{"_e":"metro:bundling:progress","_t":1792104815961,"id":"1","progress":0.6054543204376128,"total":3016,"current":2049}
+{"_e":"metro:bundling:progress","_t":1792104816062,"id":"1","progress":0.6054543204376128,"total":3016,"current":2149}
+{"_e":"metro:bundling:progress","_t":1792104816184,"id":"1","progress":0.6054543204376128,"total":3017,"current":2159}
+{"_e":"metro:bundling:progress","_t":1792104816284,"id":"1","progress":0.6054543204376128,"total":3019,"current":2256}
+{"_e":"metro:bundling:progress","_t":1792104816384,"id":"1","progress":0.6054543204376128,"total":3020,"current":2306}
+{"_e":"metro:bundling:progress","_t":1792104816486,"id":"1","progress":0.634185452392439,"total":3020,"current":2405}
+{"_e":"metro:bundling:progress","_t":1792104816586,"id":"1","progress":0.6918714091487216,"total":3020,"current":2512}
+{"_e":"metro:bundling:progress","_t":1792104816691,"id":"1","progress":0.7491991579316697,"total":3020,"current":2614}
+{"_e":"metro:bundling:progress","_t":1792104816791,"id":"1","progress":0.8123858602692864,"total":3020,"current":2722}
+{"_e":"metro:bundling:progress","_t":1792104816891,"id":"1","progress":0.8768896101048199,"total":3020,"current":2828}
+{"_e":"metro:bundling:progress","_t":1792104816991,"id":"1","progress":0.9263349433379496,"total":3037,"current":2923}
+{"_e":"metro:bundling:progress","_t":1792104817092,"id":"1","progress":0.9287313055132853,"total":3086,"current":2974}
+{"_e":"metro:bundling:progress","_t":1792104817193,"id":"1","progress":0.9353494354892242,"total":3134,"current":3031}
+{"_e":"metro:bundling:progress","_t":1792104817294,"id":"1","progress":0.9390562327911061,"total":3134,"current":3037}
+{"_e":"metro:bundling:progress","_t":1792104817397,"id":"1","progress":0.9508582678967973,"total":3135,"current":3057}
+{"_e":"metro:bundling:progress","_t":1792104817498,"id":"1","progress":0.9608308175341141,"total":3185,"current":3122}
+{"_e":"metro:bundling:progress","_t":1792104817599,"id":"1","progress":0.9659098493286966,"total":3199,"current":3144}
+{"_e":"metro:bundling:progress","_t":1792104817698,"id":"1","progress":0.9659098493286966,"total":3286,"current":3192}
+{"_e":"metro:bundling:progress","_t":1792104817798,"id":"1","progress":0.9659098493286966,"total":3340,"current":3198}
+{"_e":"metro:bundling:progress","_t":1792104817901,"id":"1","progress":0.9659098493286966,"total":3342,"current":3217}
+{"_e":"metro:bundling:progress","_t":1792104818024,"id":"1","progress":0.9659098493286966,"total":3401,"current":3260}
+{"_e":"metro:bundling:progress","_t":1792104818124,"id":"1","progress":0.9659098493286966,"total":3427,"current":3349}
+{"_e":"metro:bundling:progress","_t":1792104818224,"id":"1","progress":0.9775385133314362,"total":3453,"current":3414}
+{"_e":"metro:bundling:progress","_t":1792104818325,"id":"1","progress":0.994257835582637,"total":3478,"current":3468}
+{"_e":"metro:bundling:progress","_t":1792104818429,"id":"1","progress":0.999,"total":3480,"current":3479}
+{"_e":"metro:bundling:failed","_t":1792104818430,"id":"1","message":"SyntaxError: C:\\Users\\falcondoble\\Documents\\App-final-Asistenteparagentemayor\\components\\flujo-vinculacion.jsx: Unexpected character '​'. (26:0)\n\n  24 |   const [error, setError] = useState('')\n  25 |   const savingRef = useRef(false)\n> 26 | ​\n     | ^\n  27 |   async function savePerson() {\n  28 |     if (savingRef.current) return\n  29 |     const cleanName = name.trim()","importStack":null,"filename":"components\\flujo-vinculacion.jsx","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1792104902006,"id":"2","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792104902006,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792104902007,"id":"2","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792104902107,"id":"2","progress":0.1111111111111111,"total":321,"current":107}
+{"_e":"metro:bundling:progress","_t":1792104902207,"id":"2","progress":0.2564513477975016,"total":624,"current":316}
+{"_e":"metro:bundling:progress","_t":1792104902315,"id":"2","progress":0.32563539508619016,"total":729,"current":416}
+{"_e":"metro:bundling:progress","_t":1792104902415,"id":"2","progress":0.32563539508619016,"total":2621,"current":416}
+{"_e":"metro:bundling:progress","_t":1792104902524,"id":"2","progress":0.32563539508619016,"total":2621,"current":417}
+{"_e":"metro:bundling:progress","_t":1792104902626,"id":"2","progress":0.32563539508619016,"total":2816,"current":669}
+{"_e":"metro:bundling:progress","_t":1792104902726,"id":"2","progress":0.5203238262947627,"total":2817,"current":2032}
+{"_e":"metro:bundling:progress","_t":1792104902826,"id":"2","progress":0.8720872528869261,"total":2933,"current":2739}
+{"_e":"metro:bundling:progress","_t":1792104902926,"id":"2","progress":0.9183253195554683,"total":3093,"current":2964}
+{"_e":"metro:bundling:progress","_t":1792104903026,"id":"2","progress":0.9252222797882658,"total":3332,"current":3205}
+{"_e":"metro:bundling:failed","_t":1792104903121,"id":"2","message":"SyntaxError: C:\\Users\\falcondoble\\Documents\\App-final-Asistenteparagentemayor\\components\\flujo-vinculacion.jsx: Unexpected character '​'. (17:0)\n\n  15 | import { getAvatar } from '../lib/avatares'\n  16 | import { IconBox } from './ui/caja-icono'\n> 17 | ​\n     | ^\n  18 | // Son claves de dibujos locales, no personas ya registradas.\n  19 | const avatarOptions = ['rosa', 'carlos', 'ana']\n  20 | ​","importStack":null,"filename":"components\\flujo-vinculacion.jsx","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:bundling:started","_t":1792105212825,"id":"3","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792105212826,"id":"3","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792105212827,"id":"3","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792105212927,"id":"3","progress":0.13573407202216065,"total":323,"current":119}
+{"_e":"metro:bundling:progress","_t":1792105213027,"id":"3","progress":0.24661020870933406,"total":588,"current":292}
+{"_e":"metro:bundling:progress","_t":1792105213127,"id":"3","progress":0.3380205516495403,"total":903,"current":525}
+{"_e":"metro:bundling:progress","_t":1792105213227,"id":"3","progress":0.536541999121864,"total":1028,"current":753}
+{"_e":"metro:bundling:progress","_t":1792105213332,"id":"3","progress":0.7211387190964723,"total":1061,"current":901}
+{"_e":"metro:bundling:progress","_t":1792105213432,"id":"3","progress":0.7211387190964723,"total":2979,"current":950}
+{"_e":"metro:bundling:progress","_t":1792105213545,"id":"3","progress":0.7211387190964723,"total":2979,"current":951}
+{"_e":"metro:bundling:progress","_t":1792105213645,"id":"3","progress":0.7211387190964723,"total":3047,"current":1102}
+{"_e":"metro:bundling:progress","_t":1792105213745,"id":"3","progress":0.7416222534413002,"total":3047,"current":2624}
+{"_e":"metro:bundling:progress","_t":1792105213845,"id":"3","progress":0.954808163265306,"total":3150,"current":3078}
+{"_e":"metro:bundling:progress","_t":1792105213945,"id":"3","progress":0.954808163265306,"total":3423,"current":3338}
+{"_e":"metro:bundling:progress","_t":1792105214049,"id":"3","progress":0.999,"total":3480,"current":3480}
+{"_e":"metro:bundling:done","_t":1792105214555,"id":"3","total":3480,"ms":1729.166}
+{"_e":"metro:client_log","_t":1792105257452,"level":"log","data":["mqtt exports:","[\"connect\", \"MqttClient\", \"Store\", \"default\"]","connect?","function"]}
+{"_e":"metro:client_log","_t":1792105267371,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105270470,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105278262,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105281255,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105290467,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105293506,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105302278,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105305207,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105313240,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105316233,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105322712,"level":"warn","data":["La eliminación de personas todavía no está conectada a PocketBase."]}
+{"_e":"metro:client_log","_t":1792105324412,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105327516,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105335367,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105338344,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105346372,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105349358,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105357388,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105360375,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105368408,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105371531,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105379592,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105382424,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105390448,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105393451,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105401491,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105404480,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105412507,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105415510,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105423610,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105426710,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105434566,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105437569,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105445930,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105448737,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105456780,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105459772,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105467803,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105470806,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105478829,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105481818,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105489851,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105493050,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105501110,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105503857,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105511883,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105514873,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105522898,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105525912,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105533923,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105536912,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105545131,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105547946,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105555965,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105558959,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105566991,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105569975,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105578018,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105581091,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105589150,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105592010,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105600312,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105603051,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105611091,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105614070,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105622097,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105625096,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105633174,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105636270,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105644147,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105647138,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105655176,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105658164,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105666191,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105669180,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105677206,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105680198,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105688349,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105691210,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105699240,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105702228,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105710262,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105713246,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105721272,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105724263,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105732371,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105735473,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105743311,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105746296,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105754331,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105757317,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105765332,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105768323,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105776352,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105779493,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105787551,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105790374,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105798414,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105801403,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105809431,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105812420,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105820445,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105823426,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105831572,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105834671,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105842521,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105845510,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105853554,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105856532,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105864569,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105867557,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105875598,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105878691,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105886750,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105889595,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105897708,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105900637,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105908654,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105911656,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105919682,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105922683,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105930769,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105933869,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105941731,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105944717,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105952751,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105955745,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105963779,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105966771,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105974809,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105977890,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105985949,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105988840,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792105997111,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792105999845,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106007884,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106010861,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106018900,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106021884,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106029975,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106033072,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106040946,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106043940,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106051988,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106054974,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106063005,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106065986,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106074027,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106077091,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106085149,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106088043,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106096107,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106099075,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106107107,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106110083,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106118155,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106121123,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106129172,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106132272,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106140169,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106143161,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106151189,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106154176,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106162195,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106165194,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106173227,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106176290,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106184351,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106187246,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106195309,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106198271,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106206306,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106209289,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106217320,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106220306,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106228370,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106231469,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106239356,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106242342,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106250372,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106253359,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106261385,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106264377,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106272492,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106275491,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106283550,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106286414,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106294440,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106297427,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106305513,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106308510,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106316534,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106319530,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106327571,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106330671,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106338830,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106341565,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106349601,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106352580,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106360622,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106363612,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106371657,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106374691,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106382748,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106385653,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106393909,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106396688,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106404707,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106407703,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106415745,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106418726,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106426770,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106429868,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106437787,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106440827,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106448796,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106451787,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106459832,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106462837,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106470864,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106473891,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106481949,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106484876,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106492910,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106495911,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106503947,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106506949,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106515607,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106518529,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106526586,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106529440,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106529977,"level":"warn","data":["La eliminación de personas todavía no está conectada a PocketBase."]}
+{"_e":"metro:client_log","_t":1792106537472,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106540473,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106548486,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106551474,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792106559513,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792106562506,"level":"log","data":["Reconectando…"]}
+{"_e":"root:init","_t":1792109636422,"format":"v0-jsonl","version":"57.0.28"}
+{"_e":"env:mode","_t":1792109636422,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1792109636424,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1792109636692,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1792109636944,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":false,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1792109637230,"plugins":[]}
+{"_e":"metro:instantiate","_t":1792109639713,"atlas":false,"workers":10,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1792109682606,"id":"1","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792109682607,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792109682610,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792109683047,"id":"1","progress":0.010000000000000002,"total":1,"current":1}
+{"_e":"metro:bundling:progress","_t":1792109683147,"id":"1","progress":0.07438016528925619,"total":11,"current":3}
+{"_e":"metro:bundling:progress","_t":1792109683255,"id":"1","progress":0.07438016528925619,"total":38,"current":7}
+{"_e":"metro:bundling:progress","_t":1792109683382,"id":"1","progress":0.07438016528925619,"total":53,"current":14}
+{"_e":"metro:bundling:progress","_t":1792109683482,"id":"1","progress":0.08302212008043666,"total":59,"current":17}
+{"_e":"metro:bundling:progress","_t":1792109683513,"id":"1","progress":0.09307670209709855,"total":59,"current":18}
+{"_e":"metro:bundling:progress","_t":1792109683624,"id":"1","progress":0.09307670209709855,"total":159,"current":23}
+{"_e":"metro:bundling:progress","_t":1792109683727,"id":"1","progress":0.09307670209709855,"total":159,"current":30}
+{"_e":"metro:bundling:progress","_t":1792109683827,"id":"1","progress":0.09307670209709855,"total":197,"current":41}
+{"_e":"metro:bundling:progress","_t":1792109683928,"id":"1","progress":0.09307670209709855,"total":243,"current":55}
+{"_e":"metro:bundling:progress","_t":1792109684027,"id":"1","progress":0.09307670209709855,"total":276,"current":61}
+{"_e":"metro:bundling:progress","_t":1792109684141,"id":"1","progress":0.09307670209709855,"total":309,"current":81}
+{"_e":"metro:bundling:progress","_t":1792109684241,"id":"1","progress":0.10646124076998202,"total":331,"current":108}
+{"_e":"metro:bundling:progress","_t":1792109684343,"id":"1","progress":0.15784514243973702,"total":370,"current":147}
+{"_e":"metro:bundling:progress","_t":1792109684444,"id":"1","progress":0.23551038062283736,"total":408,"current":198}
+{"_e":"metro:bundling:progress","_t":1792109684545,"id":"1","progress":0.28522642192971864,"total":455,"current":243}
+{"_e":"metro:bundling:progress","_t":1792109684646,"id":"1","progress":0.3175233056185437,"total":504,"current":284}
+{"_e":"metro:bundling:progress","_t":1792109684747,"id":"1","progress":0.3450239428617807,"total":555,"current":326}
+{"_e":"metro:bundling:progress","_t":1792109684847,"id":"1","progress":0.36687818116301074,"total":596,"current":361}
+{"_e":"metro:bundling:progress","_t":1792109684987,"id":"1","progress":0.36687818116301074,"total":628,"current":378}
+{"_e":"metro:bundling:progress","_t":1792109685100,"id":"1","progress":0.36687818116301074,"total":2521,"current":379}
+{"_e":"metro:bundling:progress","_t":1792109685201,"id":"1","progress":0.36687818116301074,"total":2576,"current":405}
+{"_e":"metro:bundling:progress","_t":1792109685301,"id":"1","progress":0.36687818116301074,"total":2639,"current":439}
+{"_e":"metro:bundling:progress","_t":1792109685418,"id":"1","progress":0.36687818116301074,"total":2668,"current":458}
+{"_e":"metro:bundling:progress","_t":1792109685523,"id":"1","progress":0.36687818116301074,"total":2674,"current":469}
+{"_e":"metro:bundling:progress","_t":1792109685625,"id":"1","progress":0.36687818116301074,"total":2696,"current":492}
+{"_e":"metro:bundling:progress","_t":1792109685725,"id":"1","progress":0.36687818116301074,"total":2725,"current":532}
+{"_e":"metro:bundling:progress","_t":1792109685825,"id":"1","progress":0.36687818116301074,"total":2744,"current":589}
+{"_e":"metro:bundling:progress","_t":1792109685926,"id":"1","progress":0.36687818116301074,"total":2757,"current":630}
+{"_e":"metro:bundling:progress","_t":1792109686026,"id":"1","progress":0.36687818116301074,"total":2764,"current":720}
+{"_e":"metro:bundling:progress","_t":1792109686126,"id":"1","progress":0.36687818116301074,"total":2764,"current":817}
+{"_e":"metro:bundling:progress","_t":1792109686228,"id":"1","progress":0.36687818116301074,"total":2765,"current":871}
+{"_e":"metro:bundling:progress","_t":1792109686328,"id":"1","progress":0.36687818116301074,"total":2765,"current":978}
+{"_e":"metro:bundling:progress","_t":1792109686428,"id":"1","progress":0.36687818116301074,"total":2765,"current":1097}
+{"_e":"metro:bundling:progress","_t":1792109686528,"id":"1","progress":0.36687818116301074,"total":2765,"current":1216}
+{"_e":"metro:bundling:progress","_t":1792109686628,"id":"1","progress":0.36687818116301074,"total":2765,"current":1315}
+{"_e":"metro:bundling:progress","_t":1792109686728,"id":"1","progress":0.36687818116301074,"total":2765,"current":1431}
+{"_e":"metro:bundling:progress","_t":1792109686828,"id":"1","progress":0.36687818116301074,"total":2765,"current":1554}
+{"_e":"metro:bundling:progress","_t":1792109686930,"id":"1","progress":0.36687818116301074,"total":2765,"current":1663}
+{"_e":"metro:bundling:progress","_t":1792109687030,"id":"1","progress":0.4093222894028626,"total":2765,"current":1769}
+{"_e":"metro:bundling:progress","_t":1792109687130,"id":"1","progress":0.46575071368076154,"total":2765,"current":1887}
+{"_e":"metro:bundling:progress","_t":1792109687230,"id":"1","progress":0.5195463835269727,"total":2765,"current":1993}
+{"_e":"metro:bundling:progress","_t":1792109687332,"id":"1","progress":0.576281404406018,"total":2765,"current":2099}
+{"_e":"metro:bundling:progress","_t":1792109687434,"id":"1","progress":0.6376874454316256,"total":2765,"current":2208}
+{"_e":"metro:bundling:progress","_t":1792109687534,"id":"1","progress":0.700384357556514,"total":2765,"current":2314}
+{"_e":"metro:bundling:progress","_t":1792109687636,"id":"1","progress":0.7597029518424898,"total":2765,"current":2410}
+{"_e":"metro:bundling:progress","_t":1792109687737,"id":"1","progress":0.8253706071436746,"total":2765,"current":2512}
+{"_e":"metro:bundling:progress","_t":1792109687837,"id":"1","progress":0.8360288642614606,"total":2837,"current":2594}
+{"_e":"metro:bundling:progress","_t":1792109687937,"id":"1","progress":0.8411291229894244,"total":2872,"current":2634}
+{"_e":"metro:bundling:progress","_t":1792109688042,"id":"1","progress":0.8509999228512667,"total":2916,"current":2690}
+{"_e":"metro:bundling:progress","_t":1792109688142,"id":"1","progress":0.8669119795471147,"total":2960,"current":2756}
+{"_e":"metro:bundling:progress","_t":1792109688242,"id":"1","progress":0.8693471266908472,"total":3032,"current":2827}
+{"_e":"metro:bundling:progress","_t":1792109688343,"id":"1","progress":0.891254582943697,"total":3057,"current":2886}
+{"_e":"metro:bundling:progress","_t":1792109688445,"id":"1","progress":0.891254582943697,"total":3117,"current":2937}
+{"_e":"metro:bundling:progress","_t":1792109688546,"id":"1","progress":0.8958019892142284,"total":3157,"current":2988}
+{"_e":"metro:bundling:progress","_t":1792109688646,"id":"1","progress":0.9123006168048626,"total":3188,"current":3045}
+{"_e":"metro:bundling:progress","_t":1792109688749,"id":"1","progress":0.9123006168048626,"total":3266,"current":3080}
+{"_e":"metro:bundling:progress","_t":1792109688849,"id":"1","progress":0.9123006168048626,"total":3275,"current":3124}
+{"_e":"metro:bundling:progress","_t":1792109688949,"id":"1","progress":0.9123006168048626,"total":3374,"current":3158}
+{"_e":"metro:bundling:progress","_t":1792109689049,"id":"1","progress":0.9123006168048626,"total":3401,"current":3226}
+{"_e":"metro:bundling:progress","_t":1792109689149,"id":"1","progress":0.9226329697901633,"total":3421,"current":3286}
+{"_e":"metro:bundling:progress","_t":1792109689249,"id":"1","progress":0.9539763186746915,"total":3436,"current":3356}
+{"_e":"metro:bundling:progress","_t":1792109689350,"id":"1","progress":0.9775320434926803,"total":3452,"current":3413}
+{"_e":"metro:bundling:progress","_t":1792109689451,"id":"1","progress":0.9942462720084039,"total":3471,"current":3461}
+{"_e":"metro:bundling:progress","_t":1792109689555,"id":"1","progress":0.999,"total":3472,"current":3471}
+{"_e":"metro:bundling:progress","_t":1792109689737,"id":"1","progress":0.999,"total":3472,"current":3472}
+{"_e":"metro:bundling:progress","_t":1792109689837,"id":"1","progress":0.999,"total":3483,"current":3483}
+{"_e":"metro:bundling:done","_t":1792109689979,"id":"1","total":3483,"ms":7372.321}
+{"_e":"metro:client_log","_t":1792109727217,"level":"log","data":["mqtt exports:","[\"connect\", \"MqttClient\", \"Store\", \"default\"]","connect?","function"]}
+{"_e":"metro:client_log","_t":1792109737008,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109740040,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109748083,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109751060,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109759266,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109762090,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109770123,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109773137,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109781159,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109784158,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109792186,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109795175,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109803287,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109806387,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109814224,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109817210,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109825241,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109828229,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109836258,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109839246,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109847276,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109850410,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109858466,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109861288,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109869317,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109872307,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109880346,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109883343,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109891383,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109894360,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109902486,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109905585,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109913424,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109916401,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109924438,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109927418,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109935454,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109938444,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109946520,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109949606,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109957627,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109960477,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109968506,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109971497,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109979514,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109982508,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792109990538,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792109993532,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110001687,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110004786,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110012596,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110015592,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110023617,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110026615,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110034656,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110037647,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110045679,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110048807,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110056867,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110061205,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110067701,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110070687,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110078722,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110081709,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110089731,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110092718,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110100887,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110103984,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110111772,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110114758,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110122795,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110125821,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110133842,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110136845,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110144886,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110148009,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110156067,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110158932,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110167024,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110169979,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110178021,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110181022,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110189049,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110192051,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110200290,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110203186,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110211217,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110214205,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110222407,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110225213,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110233252,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110236238,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110244267,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110247249,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110255273,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110258260,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110266287,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110269275,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110277314,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110280723,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110288766,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110291882,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110299905,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110302906,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110310926,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110313924,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110321953,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110324940,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110332966,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110335965,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110343999,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110347024,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110355031,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110358020,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110366246,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110369054,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110377095,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110380096,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110388225,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110391138,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110399179,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110402209,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110410265,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110413227,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110421425,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110424232,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110432263,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110435258,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110443294,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110446287,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110454301,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110457385,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110465332,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110468344,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:bundling:failed","_t":1792110472385,"id":null,"message":"Unable to resolve \"../lib/persona\" from \"components\\vista-ajustes.jsx\"\n  15 | import { colors, fonts, radius, alpha, cardStyle } from '../lib/tema'\n  16 | import { getAvatar } from '../lib/avatares'\n> 17 | import { getLinkedPerson, clearLinkedPerson } from '../lib/persona'\n     |                                                     ^\n  18 | import { Button } from './ui/boton'\n  19 | import { IconBox } from './ui/caja-icono'\n  20 | import { ScreenHeader } from './encabezado-pantalla'","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mcomponents\\vista-ajustes.jsx\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"../lib/persona\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\\(tabs)\\ajustes.jsx\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"../../components/vista-ajustes\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"../lib/persona","originModulePath":"components\\vista-ajustes.jsx"}
+{"_e":"metro:bundling:failed","_t":1792110472572,"id":null,"message":"Unable to resolve \"../lib/persona\" from \"components\\vista-ajustes.jsx\"\n  15 | import { colors, fonts, radius, alpha, cardStyle } from '../lib/tema'\n  16 | import { getAvatar } from '../lib/avatares'\n> 17 | import { getLinkedPerson, clearLinkedPerson } from '../lib/persona'\n     |                                                     ^\n  18 | import { Button } from './ui/boton'\n  19 | import { IconBox } from './ui/caja-icono'\n  20 | import { ScreenHeader } from './encabezado-pantalla'","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mcomponents\\vista-ajustes.jsx\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"../lib/persona\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\\(tabs)\\ajustes.jsx\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"../../components/vista-ajustes\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"../lib/persona","originModulePath":"components\\vista-ajustes.jsx"}
+{"_e":"metro:client_log","_t":1792110476359,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110479344,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110487373,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110490362,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:bundling:failed","_t":1792110498224,"id":null,"message":"Unable to resolve \"../../components/vista-ajustes\" from \"app\\(tabs)\\ajustes.jsx\"\n> 1 | import { SettingsView } from '../../components/vista-ajustes'\n    |                               ^\n  2 |\n  3 | export default function AjustesPage() {\n  4 |   return <SettingsView />","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mapp\\(tabs)\\ajustes.jsx\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"../../components/vista-ajustes\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"../../components/vista-ajustes","originModulePath":"app\\(tabs)\\ajustes.jsx"}
+{"_e":"metro:client_log","_t":1792110498574,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110501531,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110509559,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110512547,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110520578,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110523727,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110531785,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110534568,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110542608,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110545596,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110553623,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110556600,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110564642,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110567638,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110575807,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110578628,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110586665,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110589653,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110597695,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110600702,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110608726,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110611715,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110619747,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110622733,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110630984,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110633750,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110641781,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110644766,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110652797,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110655787,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110663830,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110666817,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110675004,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110677833,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110685851,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110688846,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110696875,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110699862,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110707924,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110710885,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110718921,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110722125,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110730184,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110732922,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110740951,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110743950,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110751977,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110754965,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110763042,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110766144,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110774024,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110777018,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110785062,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110788076,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110796070,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110799068,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110807097,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110810165,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110818223,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110821103,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110829182,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110832119,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110840148,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110843142,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110851179,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110854167,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110862244,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110865343,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110873228,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110876216,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110884250,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110887226,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110895266,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110898262,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110906300,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110909363,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110917427,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110920293,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110928383,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110931312,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110939360,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110942355,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110950383,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110953371,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110961443,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110964542,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110972441,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110975500,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110983466,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110986458,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792110994497,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792110997485,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111005520,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111008564,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111016624,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111019520,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111027579,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111030548,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111038573,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111041547,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111049579,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111052577,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111060643,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111063745,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111071630,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111074616,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111082658,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111085660,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111093702,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111096699,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111104738,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111107765,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111115833,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111118769,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111126803,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111129794,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111137815,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111140810,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111148838,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111151840,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111159864,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111162944,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111170898,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111173901,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111181924,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111184905,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111192955,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111195939,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111203966,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111206963,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111215024,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111217999,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111226022,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111229010,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111237040,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111240024,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111248060,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111251053,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111259068,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111262142,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111270100,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111273102,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111281119,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111284111,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111292139,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111295129,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111303157,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111306163,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111314222,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111317166,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111325203,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111328487,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111336224,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111339210,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111347247,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111350237,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111358255,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111361343,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111369306,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111372301,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111380564,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111383337,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111391372,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111394357,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111402392,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111405380,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111413422,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111416404,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111424435,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111427422,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111435451,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111438449,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111446470,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111449459,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111457491,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111460544,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111468502,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111471504,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111479762,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111482527,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111490569,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111493552,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111501581,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111504586,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111512630,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111515631,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111523676,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111526883,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111534942,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111537706,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111545751,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111548747,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111556763,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111559749,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111567777,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111570777,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111578962,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111581784,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111589828,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111592826,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111600858,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111603841,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111611875,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111614855,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111622903,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111626082,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111634142,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111636929,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111644960,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111647949,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111655965,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111658964,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111666992,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111669982,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111678163,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111681260,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111689039,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111692034,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111700060,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111703053,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111711079,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111714078,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111722091,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111725282,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111733343,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111736115,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111744144,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111747135,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111755179,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111758159,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111766201,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111769193,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111777233,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111780259,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111788276,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111791268,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111799315,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111802298,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111810345,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111813332,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111821380,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111824340,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111832373,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111835361,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111843386,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111846362,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111854412,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111857390,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111865405,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111868504,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111876444,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111879466,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111887464,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111890454,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111898510,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111901498,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111909528,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111912521,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111920580,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111923549,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111931569,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111934562,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111942598,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111945594,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111953625,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111956620,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111964651,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111967699,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111975676,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111978664,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111986921,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792111989673,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792111997716,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112000695,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112008730,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112011725,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112019782,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112022739,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112030768,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112033765,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112041789,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112044788,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112052820,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112055809,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112063852,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112066900,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112074873,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112077870,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112086120,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112088887,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112096918,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112099905,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112107920,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112110921,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112118983,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112121939,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112129968,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112132956,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792112140985,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792112143974,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:bundling:started","_t":1792112786135,"id":"6","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792112786135,"id":"6","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1792112786210,"id":"6","total":1,"ms":74.6238}
+{"_e":"metro:bundling:started","_t":1792113992955,"id":"7","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792113992955,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113992959,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113993074,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113993419,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113993519,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113993619,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113993719,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113993819,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113993919,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113994019,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792113994136,"id":"7","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1792113994277,"id":"7","total":1,"ms":1321.4663}
+{"_e":"metro:client_log","_t":1792114030380,"level":"log","data":["mqtt exports:","[\"connect\", \"MqttClient\", \"Store\", \"default\"]","connect?","function"]}
+{"_e":"metro:client_log","_t":1792114040213,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114043187,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114051225,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114054212,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114062240,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114065242,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114073286,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114076317,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114084373,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114087295,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114095330,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114098310,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114106330,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114109323,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114117346,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114120332,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114128393,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114131493,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114139383,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114142368,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114150399,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114153385,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114161417,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114164420,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114172471,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114175514,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114183574,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114186453,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114194534,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114197471,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114205505,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114208484,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114216531,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114219518,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114227593,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114230696,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114238576,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114241566,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114249587,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114252584,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114260606,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114263595,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114271617,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114274707,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114282776,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114285622,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114293660,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114296644,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114304679,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114307665,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114315698,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114318684,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114326810,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114331467,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114339508,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114342493,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114350585,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114353513,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114361542,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114364613,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114372567,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114375575,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114383573,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114386558,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114394598,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114397589,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114405605,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114408634,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:bundling:started","_t":1792114432474,"id":"8","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792114432474,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114432478,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114432611,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114432964,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114433064,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114433164,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114433264,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114433364,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114433464,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114433564,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792114433683,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1792114433847,"id":"8","total":1,"ms":1372.7876}
+{"_e":"metro:client_log","_t":1792114470635,"level":"log","data":["mqtt exports:","[\"connect\", \"MqttClient\", \"Store\", \"default\"]","connect?","function"]}
+{"_e":"metro:client_log","_t":1792114480292,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114483262,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114491297,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114494285,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114502317,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114505355,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114513414,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114516329,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114524370,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114527359,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114535381,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114538373,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114546399,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114549389,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114558053,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114560842,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114568874,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114571871,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114579902,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114582888,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114590918,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114593908,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114601935,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114605172,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114612950,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114615937,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114623972,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114626957,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114634987,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114637975,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114646009,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114649193,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114657253,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114660003,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114668030,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114671030,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114679070,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114682062,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114690099,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114693091,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114701273,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114704101,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114712145,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114715127,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114723154,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114726146,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114734177,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114737164,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114745196,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114748396,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114756452,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114759218,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114767258,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114770249,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114778281,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114781273,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114789423,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114792586,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114800619,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114803611,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114811643,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114814630,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114822794,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114825893,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114833669,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114836674,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114844691,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114847685,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:bundling:failed","_t":1792114852801,"id":null,"message":"Unable to resolve \"../../components/actividad-reciente\" from \"app\\(tabs)\\inicio.jsx\"\n  12 | import { QuickActions } from '../../components/acciones-rapidas'\n  13 | import { LinkedPeople } from '../../components/personas-vinculadas'\n> 14 | import { RecentActivity } from '../../components/actividad-reciente'\n     |                                 ^\n  15 | import { EmptyHome } from '../../components/inicio-vacio'\n  16 | import { LinkFlow } from '../../components/flujo-vinculacion'\n  17 |","importStack":"\u001b[1mImport stack:\u001b[22m\n\n\u001b[90m \u001b[39mapp\\(tabs)\\inicio.jsx\n\u001b[90m |\u001b[39m \u001b[36mimport\u001b[39m \u001b[32m\"../../components/actividad-reciente\"\u001b[39m\n\n\u001b[90m \u001b[39mapp\u001b[2m (require.context)\u001b[22m\n","filename":null,"targetModuleName":"../../components/actividad-reciente","originModulePath":"app\\(tabs)\\inicio.jsx"}
+{"_e":"metro:client_log","_t":1792114855723,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114858716,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114866768,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114869946,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114877973,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114880735,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114888775,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114891766,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114899786,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114902772,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114910913,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114913788,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114921993,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114924790,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114932824,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114935832,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114943860,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114946857,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114954886,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114957878,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114965914,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114969111,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114977171,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114979916,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114987936,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792114990928,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792114998968,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115001972,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115009982,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115012976,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115021193,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115023978,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115032017,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115035007,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115043046,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115046044,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115054081,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115057082,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115065162,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115068314,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115076375,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115079188,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115087215,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115090202,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115098223,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115101220,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115109261,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115112243,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115120392,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115123493,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115131330,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115134320,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115142349,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115145354,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115153397,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115156387,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115164422,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115167512,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115175571,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115178431,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115186465,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115189449,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115197481,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115200465,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115208486,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115211493,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115219591,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115222691,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115230563,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115233551,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115241579,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115244579,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115252622,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115255595,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115263643,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115266711,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115274771,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115277649,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115285727,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115288673,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115296706,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115299711,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115307741,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115310731,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115318761,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115321745,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115329953,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115332757,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115340797,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115343782,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115351829,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115354805,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115362831,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115365833,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115373861,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115377074,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115385129,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115387875,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115395898,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115398909,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115406944,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115409930,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115417964,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115420950,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115429151,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115431953,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115440012,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115443000,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115451078,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115454015,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115462044,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115465049,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115473089,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115476272,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115484331,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115487136,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115495169,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115498161,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115506177,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115509187,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115517225,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115520223,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115528353,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115531450,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115539288,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115542280,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115550319,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115553304,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115561347,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115564332,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115572374,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115575471,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115583531,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115586394,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115594425,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115597410,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115605450,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115608439,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115616476,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115619459,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115627551,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115630651,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115638521,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115641518,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115649553,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115652544,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115660582,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115663587,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115671615,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115674670,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115682729,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115685632,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115693687,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115696655,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115704684,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115707683,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115715723,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115718701,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115726753,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115729736,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115737911,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115741010,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115748795,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115751789,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115759819,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115762813,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115770848,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115773836,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115781886,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115785030,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115793090,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115795915,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115803951,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115806955,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115815003,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115817989,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115826023,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115829007,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115837111,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115840209,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115848059,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115851049,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115859072,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115862064,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115870095,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115873083,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115881121,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115884231,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115892292,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115895187,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115903250,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115906209,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115914255,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115917243,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115925274,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115928256,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115936310,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115939412,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115947306,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115950301,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115958333,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115961320,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115969339,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115972339,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115980370,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115983360,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792115991489,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792115994382,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116002447,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116005386,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116013425,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116016424,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116024455,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116027442,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116035476,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116038609,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116046488,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116049490,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116057520,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116060511,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116068544,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116071521,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116079560,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116082627,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116090689,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116093571,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116101646,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116104597,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116112640,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116115638,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116123665,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116126666,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116134710,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116137809,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116145727,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116148768,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116156751,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116159721,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116167769,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116170756,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116178777,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116181838,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116189889,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116192825,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116200855,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116203868,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116211902,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116214904,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116222929,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116225922,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116233970,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116237008,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116245002,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116247976,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116256234,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116259014,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116267050,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116270033,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116278071,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:client_log","_t":1792116281048,"level":"log","data":["Reconectando…"]}
+{"_e":"metro:client_log","_t":1792116289090,"level":"log","data":["Conexión cerrada"]}
+{"_e":"metro:bundling:started","_t":1792116902078,"id":"b","platform":"android","environment":null,"entry":"node_modules\\expo-router\\entry.js"}
+{"_e":"metro:bundling:progress","_t":1792116902078,"id":"b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1792116902080,"id":"b","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1792116902147,"id":"b","total":1,"ms":69.2619}

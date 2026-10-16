@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useState } from 'react'
-import { ActivityIndicator, ScrollView, View } from 'react-native'
+import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native'
 import { useFocusEffect, useNavigation, useRouter } from 'expo-router'
 import { colors } from '../../lib/tema'
 import { getLinkedPerson, saveLinkedPerson } from '../../lib/persona'
+import { verificarSesion } from '../../lib/conexion-pocketbase'
+import { cerrarSesion, ErrorSesion } from '../../lib/sesion'
 import { useTabBarStyle } from '../../lib/estilo-barra-pestanas'
 import { HomeHeader } from '../../components/encabezado-inicio'
 import { AlertBanner } from '../../components/aviso-alerta'
@@ -19,25 +21,52 @@ export default function HomePage() {
   const tabBarStyle = useTabBarStyle()
   const [view, setView] = useState('loading') // 'loading' | 'empty' | 'linking' | 'linked'
   const [person, setPerson] = useState(null)
+  const [error, setError] = useState('')
+  const [retry, setRetry] = useState(0)
+  const [leaving, setLeaving] = useState(false)
 
-  // Leemos la persona vinculada cada vez que la pestaña recibe foco
-  // (por ejemplo, después de desvincular desde Ajustes).
+  // Al volver a Inicio, verificamos la sesión y consultamos SOLO su familiar.
   useFocusEffect(
     useCallback(() => {
       let active = true
-      getLinkedPerson().then((saved) => {
-        if (!active) return
-        setView((current) => {
-          if (current === 'linking') return current
-          return saved ? 'linked' : 'empty'
-        })
-        setPerson(saved)
-      })
-      return () => {
-        active = false
+      setPerson(null)
+      setError('')
+      setView('loading')
+      async function cargar() {
+        try {
+          await verificarSesion()
+          const saved = await getLinkedPerson()
+          if (!active) return
+          setPerson(saved)
+          setView(saved ? 'linked' : 'empty')
+        } catch (error) {
+          if (!active) return
+          if (error instanceof ErrorSesion) {
+            router.replace('/iniciar-sesion')
+            return
+          }
+          setError(error.message || 'No se pudo consultar la persona vinculada.')
+          setView('error')
+        }
       }
-    }, []),
+      cargar()
+      return () => { active = false }
+    }, [retry, router]),
   )
+
+  async function cambiarCuenta() {
+    if (leaving) return
+    setLeaving(true)
+    try {
+      await cerrarSesion()
+      setPerson(null)
+      router.replace('/iniciar-sesion')
+    } catch (_) {
+      setError('No se pudo cerrar la sesión. Intentá nuevamente.')
+    } finally {
+      setLeaving(false)
+    }
+  }
 
   // Mientras se vincula, ocultamos la barra de pestañas (igual que en la versión web)
   useEffect(() => {
@@ -47,8 +76,8 @@ export default function HomePage() {
   }, [view, navigation, tabBarStyle])
 
   async function completeLink(linked) {
-    setPerson(linked)
-    await saveLinkedPerson(linked)
+    const saved = await saveLinkedPerson(linked)
+    setPerson(saved)
     setView('linked')
   }
 
@@ -68,6 +97,17 @@ export default function HomePage() {
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }} showsVerticalScrollIndicator={false}>
         <HomeHeader />
+        <View style={{ paddingHorizontal: 20, alignItems: 'flex-end', marginBottom: 12 }}>
+          <Pressable onPress={cambiarCuenta} disabled={leaving} accessibilityRole="button" style={{ padding: 10 }}>
+            <Text style={{ color: colors.primary }}>{leaving ? 'Cerrando sesión...' : 'Cambiar cuenta'}</Text>
+          </Pressable>
+        </View>
+        {error ? <Text accessibilityRole="alert" style={{ color: '#B42318', paddingHorizontal: 20, marginBottom: 12 }}>{error}</Text> : null}
+        {view === 'error' && (
+          <Pressable onPress={() => setRetry(value => value + 1)} accessibilityRole="button" style={{ padding: 20 }}>
+            <Text style={{ color: colors.primary }}>Volver a intentar</Text>
+          </Pressable>
+        )}
         {view === 'empty' && <EmptyHome onStart={() => setView('linking')} />}
         {view === 'linked' && person && (
           <View style={{ gap: 24, paddingHorizontal: 20, paddingTop: 4 }}>
@@ -84,6 +124,10 @@ export default function HomePage() {
                 },
               ]}
             />
+          </View>
+        )}
+        {(view === 'linked' || view === 'empty') && (
+          <View style={{ paddingHorizontal: 20, marginTop: 24 }}>
             <RecentActivity />
           </View>
         )}

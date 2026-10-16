@@ -25,14 +25,3 @@ npx expo start -c
 Si te sale otro error, copiame el texto de la terminal, solo las últimas 20 líneas más o menos, y lo veo.
 . Instalá la librería
 
-bash
-cd ~/cerca
-npm install mqtt --legacy-peer-deps 
-Paso 3: mirá la base en el navegador.
-
-Abrí el navegador (Firefox o Chrome).
-Entrá a http://127.0.0.1:8090/_/
-Iniciá sesión con:
-Email: admin@cerca.local
-Clave: cerca12345678
-A la izquierda vas a ver dos tablas: people y scheduled_messages.

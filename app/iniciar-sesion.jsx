@@ -15,7 +15,7 @@ import { Button } from '../components/ui/boton'
 import { TextField } from '../components/ui/campo-texto'
 import { ScreenHeader } from '../components/encabezado-pantalla'
 
-const POCKETBASE_URL = 'http://10.56.2.22:8090'
+import { iniciarSesion } from '../lib/conexion-pocketbase'
 
 export default function LoginPage() {
   const router = useRouter()
@@ -35,33 +35,15 @@ export default function LoginPage() {
     setLoading(true)
 
     try {
-      const response = await fetch(
-        `${POCKETBASE_URL}/api/collections/users/auth-with-password`,
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            identity: email.trim().toLowerCase(),
-            password,
-          }),
-        }
-      )
-
-      const data = await response.json()
-
-      if (!response.ok) {
-        setError(
-          response.status === 400
-            ? 'El correo o la contraseña son incorrectos.'
-            : 'No se pudo iniciar sesión. Revisá la conexión con PocketBase.'
-        )
-        return
-      }
+      await iniciarSesion(email, password)
 
       router.replace('/inicio')
     } catch (e) {
-      console.error('Error al iniciar sesión:', e)
-      setError('No se pudo conectar con PocketBase. Revisá que esté encendido.')
+      setError(
+        e.status === 400
+          ? 'El correo o la contraseña son incorrectos.'
+          : e.message || 'No se pudo iniciar sesión.'
+      )
     } finally {
       setLoading(false)
     }

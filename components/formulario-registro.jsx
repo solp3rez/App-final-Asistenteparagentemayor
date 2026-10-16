@@ -48,7 +48,7 @@ export function RegisterForm() {
     setLoading(true)
 
     try {
-      await pbRequest('users', {
+      await pbRequest('usuarios', {
         method: 'POST',
         body: {
           email: email.trim().toLowerCase(),

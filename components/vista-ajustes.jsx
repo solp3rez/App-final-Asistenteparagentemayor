@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Image, Modal, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native'
 import { useFocusEffect, useRouter } from 'expo-router'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -9,12 +9,12 @@ import {
   Volume2,
   ChevronRight,
   Unlink,
-  UserPlus,
   X,
 } from 'lucide-react-native'
 import { colors, fonts, radius, alpha, cardStyle } from '../lib/tema'
 import { getAvatar } from '../lib/avatares'
 import { getLinkedPerson, clearLinkedPerson } from '../lib/persona'
+import { ErrorSesion } from '../lib/sesion'
 import { Button } from './ui/boton'
 import { IconBox } from './ui/caja-icono'
 import { ScreenHeader } from './encabezado-pantalla'
@@ -25,26 +25,77 @@ export function SettingsView() {
   const [person, setPerson] = useState(null)
   const [ready, setReady] = useState(false)
   const [confirmUnlink, setConfirmUnlink] = useState(false)
+  const [loadError, setLoadError] = useState('')
+  const [unlinkError, setUnlinkError] = useState('')
+  const [unlinking, setUnlinking] = useState(false)
+  const [retry, setRetry] = useState(0)
+  const unlinkingRef = useRef(false)
+  const mountedRef = useRef(true)
+
+  useEffect(() => {
+    mountedRef.current = true
+    return () => { mountedRef.current = false }
+  }, [])
 
   useFocusEffect(
     useCallback(() => {
       let active = true
-      getLinkedPerson().then((p) => {
-        if (!active) return
-        setPerson(p)
-        setReady(true)
-      })
-      return () => {
-        active = false
-      }
-    }, []),
+      setReady(false)
+      setPerson(null)
+      setLoadError('')
+      getLinkedPerson()
+        .then((p) => {
+          if (active) setPerson(p)
+        })
+        .catch((error) => {
+          if (!active) return
+          if (error instanceof ErrorSesion) {
+            router.replace('/iniciar-sesion')
+            return
+          }
+          setLoadError(error.message || 'No se pudo consultar la persona vinculada.')
+        })
+        .finally(() => { if (active) setReady(true) })
+      return () => { active = false }
+    }, [retry, router]),
   )
 
+  function openUnlink() {
+    setUnlinkError('')
+    setConfirmUnlink(true)
+  }
+
+  function closeUnlink() {
+    if (!unlinkingRef.current) setConfirmUnlink(false)
+  }
+
   async function unlink() {
-    await clearLinkedPerson()
-    setPerson(null)
-    setConfirmUnlink(false)
-    router.navigate('/inicio')
+    if (unlinkingRef.current || !person?.id) return
+    unlinkingRef.current = true
+    setUnlinking(true)
+    setUnlinkError('')
+    try {
+      await clearLinkedPerson(person.id)
+      if (!mountedRef.current) return
+      setPerson(null)
+      setConfirmUnlink(false)
+      router.navigate('/inicio')
+    } catch (error) {
+      if (!mountedRef.current) return
+      if (error instanceof ErrorSesion) {
+        setConfirmUnlink(false)
+        router.replace('/iniciar-sesion')
+        return
+      }
+      setUnlinkError(
+        error.status === 403
+          ? 'PocketBase no permite desvincular todavía. Revisá la regla de Actualizar.'
+          : error.message || 'No se pudo desvincular. Intentá nuevamente.'
+      )
+    } finally {
+      unlinkingRef.current = false
+      if (mountedRef.current) setUnlinking(false)
+    }
   }
 
   return (
@@ -57,7 +108,14 @@ export function SettingsView() {
       >
         <View>
           <Text style={styles.sectionTitle}>Persona vinculada</Text>
-          {ready && person ? (
+          {!ready && <Text style={styles.emptyText}>Cargando datos...</Text>}
+          {loadError ? (
+            <View style={styles.empty}>
+              <Text accessibilityRole="alert" style={styles.error}>{loadError}</Text>
+              <Button label="Volver a intentar" onPress={() => setRetry(value => value + 1)} style={{ marginTop: 12 }} />
+            </View>
+          ) : null}
+          {ready && !loadError && person ? (
             <View style={styles.card}>
               <View style={{ flexDirection: 'row', alignItems: 'center', gap: 12 }}>
                 <Image source={getAvatar(person.avatar)} style={styles.avatar} />
@@ -73,8 +131,8 @@ export function SettingsView() {
 
               <View style={styles.cardActions}>
                 <Button
-                  label="Cambiar persona"
-                  icon={UserPlus}
+                  label="Ver en Inicio"
+                  icon={Speaker}
                   variant="secondary"
                   height={32}
                   radius={radius.xl}
@@ -91,13 +149,14 @@ export function SettingsView() {
                   radius={radius.xl}
                   fontSize={13}
                   weight="medium"
-                  onPress={() => setConfirmUnlink(true)}
+                  onPress={openUnlink}
+                  disabled={unlinking}
                   style={{ flex: 1 }}
                 />
               </View>
             </View>
           ) : (
-            ready && (
+            ready && !loadError && (
               <View style={styles.empty}>
                 <Text style={styles.emptyText}>No hay ninguna persona vinculada todavía.</Text>
                 <Button
@@ -116,7 +175,8 @@ export function SettingsView() {
 
         {/* Preferencias */}
         <View>
-          <Text style={styles.sectionTitle}>Preferencias del parlante</Text>
+          <Text style={styles.sectionTitle}>Preferencias del parlante — de ejemplo</Text>
+          <Text style={[styles.emptyText, { marginBottom: 12 }]}>Estas opciones todavía no modifican el equipo.</Text>
           <View style={[styles.card, { padding: 0, overflow: 'hidden' }]}>
             <PrefRow icon={Volume2} label="Volumen de reproducción" value="Alto" />
             <PrefRow icon={Bell} label="Notificaciones de alertas" value="Activadas" />
@@ -128,25 +188,27 @@ export function SettingsView() {
         visible={confirmUnlink}
         transparent
         animationType="fade"
-        onRequestClose={() => setConfirmUnlink(false)}
+        onRequestClose={closeUnlink}
       >
         <View style={styles.overlay}>
           <View style={[styles.sheet, { marginBottom: insets.bottom + 16 }]}>
             <View style={styles.sheetHeader}>
-              <Text style={styles.sheetTitle}>¿Desvincular?</Text>
+              <Text style={styles.sheetTitle}>¿Quitar a esta persona de tu cuenta?</Text>
               <Pressable
                 accessibilityRole="button"
                 accessibilityLabel="Cerrar"
-                onPress={() => setConfirmUnlink(false)}
+                onPress={closeUnlink}
+                disabled={unlinking}
                 style={styles.close}
               >
                 <X size={16} color={colors.mutedForeground} />
               </Pressable>
             </View>
             <Text style={styles.sheetText}>
-              Se desconectará el parlante y ya no podrás enviar mensajes hasta volver a vincular a
-              una persona.
+              Se quitará el vínculo de {person?.name || 'esta persona'} con tu cuenta. Su registro
+              se conservará en la base de datos. Esto no apaga ni desconecta físicamente el parlante.
             </Text>
+            {unlinkError ? <Text accessibilityRole="alert" style={[styles.error, { marginTop: 12 }]}>{unlinkError}</Text> : null}
             <View style={{ flexDirection: 'row', gap: 8, marginTop: 20 }}>
               <Button
                 label="Volver"
@@ -155,17 +217,19 @@ export function SettingsView() {
                 radius={radius.xl}
                 fontSize={14}
                 weight="medium"
-                onPress={() => setConfirmUnlink(false)}
+                onPress={closeUnlink}
+                disabled={unlinking}
                 style={{ flex: 1 }}
               />
               <Button
-                label="Sí, desvincular"
+                label={unlinking ? 'Desvinculando...' : 'Sí, desvincular'}
                 variant="warn"
                 height={36}
                 radius={radius.xl}
                 fontSize={14}
                 weight="medium"
                 onPress={unlink}
+                disabled={unlinking}
                 style={{ flex: 1 }}
               />
             </View>
@@ -190,6 +254,7 @@ function PrefRow({ icon: Icon, label, value, last }) {
 }
 
 const styles = StyleSheet.create({
+  error: { color: '#B42318', fontFamily: fonts.body, fontSize: 14 },
   sectionTitle: {
     marginBottom: 8,
     fontFamily: fonts.bodySemibold,

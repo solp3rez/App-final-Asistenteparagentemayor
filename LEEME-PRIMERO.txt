@@ -1,0 +1,97 @@
+CAMBIO: CADA FAMILIAR VE SU PROPIA PERSONA MAYOR
+
+ANTES DE EMPEZAR
+- Estos archivos son para el proyecto de la APP, no para DDS-sol.
+- Hacé una copia de los cuatro archivos actuales fuera del proyecto.
+- No copies código desde una vista previa: extraé el ZIP y copiá los archivos.
+- No borres registros ni la carpeta pb_data.
+
+1. INSTALAR LA DEPENDENCIA
+En la terminal de VS Code, ubicada en la carpeta de la app, ejecutá:
+  npx expo install expo-secure-store
+Este comando sirve tanto en PowerShell de Windows como en Linux.
+SecureStore guarda el token de sesión en el almacenamiento protegido del celular.
+No guarda tu contraseña. Si falla la instalación, no reemplaces todavía los archivos.
+
+2. COLOCAR LOS CINCO ARCHIVOS
+Copiá cada archivo en su ubicación correspondiente:
+- app/iniciar-sesion.jsx             Reemplaza el actual.
+- app/(tabs)/inicio.jsx              Reemplaza el actual.
+- lib/conexion-pocketbase.js         Reemplaza el actual.
+- lib/persona.js                     Reemplaza el actual.
+- lib/sesion.js                      Es nuevo.
+No reemplaces carpetas completas. No cambies package.json a mano.
+La URL actual sigue siendo http://192.168.1.100:8090.
+Si cambiás de red, editá la URL solamente en lib/conexion-pocketbase.js.
+
+3. PROTEGER personas_mayores EN POCKETBASE
+Abrí personas_mayores -> engranaje -> API Rules / Reglas API.
+En cada una de estas tres reglas, pegá exactamente la misma expresión:
+- List / Listar
+- View / Ver
+- Create / Crear
+
+@request.auth.id != "" && familiar = @request.auth.id
+
+Dejá Update / Actualizar y Delete / Eliminar BLOQUEADAS (candado).
+Bloqueadas NO significa dejarlas en blanco: en blanco permite acceso público.
+Guardá los cambios. No cambies las reglas de otras colecciones a ciegas.
+El filtrado en la app solo no es una protección: estas reglas deben guardarse
+para que PocketBase también impida acceder a personas de otras cuentas.
+Las reglas se probaron en una base temporal equivalente, no en tu instalación.
+
+4. ARRANCAR
+Dejá PocketBase encendido.
+En la terminal de Expo detené el proceso con Ctrl+C y ejecutá:
+  npx expo start -c
+Ingresá a la app con una cuenta de la colección usuarios, no con el administrador.
+
+5. PROBAR
+- Una cuenta nueva no debe recibir automáticamente a Carlos ni otro registro viejo.
+- Si no tiene una persona propia, debe aparecer la pantalla vacía y Vincular ahora.
+- Tocá Vincular ahora, escribí un nombre de prueba y tocá Guardar datos.
+- En PocketBase -> personas_mayores, el nuevo registro debe tener familiar
+  apuntando al usuario que inició sesión.
+- En Inicio, Cambiar cuenta cierra la sesión antes de ingresar con otra.
+- La segunda cuenta debe ver su propia persona o la pantalla vacía.
+- Al volver a la primera cuenta, debe verse su persona original.
+- Un error de conexión debe mostrar un mensaje y Volver a intentar, no inventar
+  que no hay persona ni mostrar registros de otras cuentas.
+
+QUÉ PASA CON LOS DATOS ANTERIORES
+Los registros sin familiar se conservan, pero la app no se los asigna a nadie.
+No los borres. Si alguno corresponde a una cuenta real, primero hay que verificar
+cuál es y después asociarlo desde el panel, sin adivinar por el orden de la lista.
+
+ALCANCE Y PENDIENTES
+- Corrige la sesión del login, la consulta por familiar y el guardado del vínculo.
+- El inicio usa la respuesta real de PocketBase para mostrar la persona guardada.
+- Agrega Cambiar cuenta en Inicio para cerrar la sesión y probar otra cuenta.
+- El formulario actual de registro crea la cuenta pero no inicia sesión por sí solo:
+  después de registrarte, Inicio te llevará al login. Ingresá con la cuenta recién
+  creada. No vuelve a crear el usuario al iniciar sesión.
+- La sesión se guarda protegida y se valida al entrar a Inicio. Si vence, pedirá login.
+  La redirección automática desde la pantalla de bienvenida aún es otro cambio.
+- Desvincular todavía no está implementado; esta entrega no lo habilita.
+- No conecta MQTT, no detecta el parlante y no implementa historial ni alertas reales.
+  Las tarjetas de estado y actividad que ya eran ejemplos siguen siendo ejemplos.
+- Solo protege personas_mayores con las reglas indicadas. Usuarios, mensajes,
+  otras pantallas y el resto de permisos necesitan su propia revisión.
+- HTTP con IP local es solo para la prueba en red de confianza con datos ficticios.
+  Antes de usar datos reales o un servidor accesible, hay que configurar HTTPS
+  y revisar la seguridad completa. No publiques tokens ni pb_data en GitHub.
+- Evita duplicados secuenciales desde esta pantalla; no impone todavía una
+  restricción única en la base para altas simultáneas desde varios celulares.
+
+VERIFICACIONES REALIZADAS
+- Sintaxis de los cinco archivos sin caracteres invisibles U+200B.
+- Pruebas de API contra PocketBase local con cuentas ficticias y base separada:
+  sin sesión, registro anterior sin dueño, guardado propio, aislamiento A/B,
+  bloqueo de consulta ajena, bloqueo de creación para otro familiar,
+  validación de sesión guardada y limpieza al fallar un login.
+- El almacenamiento del celular se simuló en las pruebas de API.
+  Hay que comprobar SecureStore y el flujo visual en tu Expo Go real.
+
+DOCUMENTACIÓN
+https://docs.expo.dev/versions/latest/sdk/securestore/
+https://pocketbase.io/docs/api-rules-and-filters/
