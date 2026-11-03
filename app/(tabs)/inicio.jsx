@@ -3,6 +3,7 @@ import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-nati
 import { useFocusEffect, useNavigation, useRouter } from 'expo-router'
 import { colors } from '../../lib/tema'
 import { getLinkedPerson, saveLinkedPerson } from '../../lib/persona'
+import { getLinkedSpeaker } from '../../lib/parlante'
 import { verificarSesion } from '../../lib/conexion-pocketbase'
 import { cerrarSesion, ErrorSesion } from '../../lib/sesion'
 import { useTabBarStyle } from '../../lib/estilo-barra-pestanas'
@@ -21,6 +22,8 @@ export default function HomePage() {
   const tabBarStyle = useTabBarStyle()
   const [view, setView] = useState('loading') // 'loading' | 'empty' | 'linking' | 'linked'
   const [person, setPerson] = useState(null)
+  const [speaker, setSpeaker] = useState(null)
+  const [speakerError, setSpeakerError] = useState('')
   const [error, setError] = useState('')
   const [retry, setRetry] = useState(0)
   const [leaving, setLeaving] = useState(false)
@@ -30,14 +33,29 @@ export default function HomePage() {
     useCallback(() => {
       let active = true
       setPerson(null)
+      setSpeaker(null)
+      setSpeakerError('')
       setError('')
       setView('loading')
       async function cargar() {
         try {
           await verificarSesion()
           const saved = await getLinkedPerson()
+          let linkedSpeaker = null
+          let speakerProblem = ''
+          if (saved) {
+            // Un problema con el parlante no debe tapar el resto de Inicio.
+            try {
+              linkedSpeaker = await getLinkedSpeaker()
+            } catch (e) {
+              if (e instanceof ErrorSesion) throw e
+              speakerProblem = 'No se pudo consultar tu parlante. Probá de nuevo más tarde.'
+            }
+          }
           if (!active) return
           setPerson(saved)
+          setSpeaker(linkedSpeaker)
+          setSpeakerError(speakerProblem)
           setView(saved ? 'linked' : 'empty')
         } catch (error) {
           if (!active) return
@@ -79,6 +97,8 @@ export default function HomePage() {
     const saved = await saveLinkedPerson(linked)
     setPerson(saved)
     setView('linked')
+    // Siguiente paso: el identificador del parlante y el código del correo.
+    router.push('/vincular-parlante')
   }
 
   if (view === 'loading') {
@@ -112,7 +132,7 @@ export default function HomePage() {
         {view === 'linked' && person && (
           <View style={{ gap: 24, paddingHorizontal: 20, paddingTop: 4 }}>
             <AlertBanner onPress={() => router.navigate('/alertas')} />
-            <SpeakerStatusCard />
+            <SpeakerStatusCard speaker={speaker} loadError={speakerError} onLink={() => router.push('/vincular-parlante')} />
             <QuickActions />
             <LinkedPeople
               people={[

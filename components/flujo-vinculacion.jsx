@@ -129,7 +129,7 @@ export function LinkFlow({ onCancel, onComplete }) {
         </View>
 
         <Text style={styles.connectionNote}>
-          Este paso guarda los datos de la persona. La conexión con el parlante se comprueba por separado.
+          Paso 1 de 3. Después te pedimos el identificador del parlante y te mandamos un código por correo para activarlo.
         </Text>
         {!!error && <Text accessibilityRole="alert" style={styles.error}>{error}</Text>}
         <Pressable
@@ -144,7 +144,7 @@ export function LinkFlow({ onCancel, onComplete }) {
           ]}
         >
           {saving && <ActivityIndicator size="small" color={colors.primaryForeground} />}
-          <Text style={styles.primaryBtnText}>{saving ? 'Guardando…' : 'Guardar datos'}</Text>
+          <Text style={styles.primaryBtnText}>{saving ? 'Guardando…' : 'Continuar'}</Text>
         </Pressable>
       </ScrollView>
     </View>

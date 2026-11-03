@@ -151,6 +151,10 @@ export default function LoginPage() {
               </Pressable>
             </View>
             {typeof errores.password === 'string' && errores.password ? <Text accessibilityLiveRegion="polite" style={[styles.errorText, { color: '#FF0000' }]}>{errores.password}</Text> : null}
+            <Pressable accessibilityRole="link" disabled={ocupado} hitSlop={8}
+              onPress={() => router.push('/recuperar-contrasena')} style={styles.forgotLink}>
+              <Text style={styles.link}>¿Olvidaste tu contraseña?</Text>
+            </Pressable>
           </View>
         </View>
         <View style={{ marginTop: 26, gap: 14 }}>
@@ -201,6 +205,7 @@ const styles = StyleSheet.create({
   errorText: { marginTop: 6, color: '#FF0000', fontFamily: fonts.body, fontSize: 13, lineHeight: 19 },
   footer: { textAlign: 'center', fontFamily: fonts.body, fontSize: 14, lineHeight: 22, color: colors.mutedForeground },
   link: { fontFamily: fonts.bodySemibold, fontSize: 14, color: colors.primary },
+  forgotLink: { minHeight: 44, justifyContent: 'center', alignSelf: 'flex-end' },
   helpSection: { marginTop: 28, borderTopWidth: 1, borderTopColor: colors.border, paddingTop: 10 },
   helpLink: { minHeight: 44, justifyContent: 'center', alignSelf: 'center', paddingVertical: 8 },
   helpLinkText: { textAlign: 'center', fontFamily: fonts.body, fontSize: 13, lineHeight: 20, color: colors.mutedForeground },
