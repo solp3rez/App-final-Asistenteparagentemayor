@@ -18,6 +18,7 @@ import { ErrorSesion } from '../lib/sesion'
 import { Button } from './ui/boton'
 import { IconBox } from './ui/caja-icono'
 import { ScreenHeader } from './encabezado-pantalla'
+import { PerfilFamiliar } from './perfil-familiar'
 
 export function SettingsView() {
   const router = useRouter()
@@ -106,6 +107,7 @@ export function SettingsView() {
         contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32, gap: 24 }}
         showsVerticalScrollIndicator={false}
       >
+        <PerfilFamiliar />
         <View>
           <Text style={styles.sectionTitle}>Persona vinculada</Text>
           {!ready && <Text style={styles.emptyText}>Cargando datos...</Text>}

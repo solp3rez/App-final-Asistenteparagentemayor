@@ -4,7 +4,7 @@ import { useFocusEffect, useNavigation, useRouter } from 'expo-router'
 import { colors } from '../../lib/tema'
 import { getLinkedPerson, saveLinkedPerson } from '../../lib/persona'
 import { getLinkedSpeaker } from '../../lib/parlante'
-import { verificarSesion } from '../../lib/conexion-pocketbase'
+import { urlFotoPerfil, verificarSesion } from '../../lib/conexion-pocketbase'
 import { cerrarSesion, ErrorSesion } from '../../lib/sesion'
 import { useTabBarStyle } from '../../lib/estilo-barra-pestanas'
 import { HomeHeader } from '../../components/encabezado-inicio'
@@ -22,6 +22,8 @@ export default function HomePage() {
   const tabBarStyle = useTabBarStyle()
   const [view, setView] = useState('loading') // 'loading' | 'empty' | 'linking' | 'linked'
   const [person, setPerson] = useState(null)
+  const [perfil, setPerfil] = useState(null)
+  const [fotoPerfil, setFotoPerfil] = useState(null)
   const [speaker, setSpeaker] = useState(null)
   const [speakerError, setSpeakerError] = useState('')
   const [error, setError] = useState('')
@@ -33,13 +35,20 @@ export default function HomePage() {
     useCallback(() => {
       let active = true
       setPerson(null)
+      setPerfil(null)
+      setFotoPerfil(null)
       setSpeaker(null)
       setSpeakerError('')
       setError('')
       setView('loading')
       async function cargar() {
         try {
-          await verificarSesion()
+          const cuenta = await verificarSesion()
+          let foto = null
+          try { foto = await urlFotoPerfil(cuenta) } catch (e) { if (e instanceof ErrorSesion) throw e }
+          if (!active) return
+          setPerfil(cuenta)
+          setFotoPerfil(foto)
           const saved = await getLinkedPerson()
           let linkedSpeaker = null
           let speakerProblem = ''
@@ -116,7 +125,7 @@ export default function HomePage() {
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }} showsVerticalScrollIndicator={false}>
-        <HomeHeader />
+        <HomeHeader nombre={perfil?.nombre} foto={fotoPerfil} onPerfil={() => router.navigate('/ajustes')} />
         <View style={{ paddingHorizontal: 20, alignItems: 'flex-end', marginBottom: 12 }}>
           <Pressable onPress={cambiarCuenta} disabled={leaving} accessibilityRole="button" style={{ padding: 10 }}>
             <Text style={{ color: colors.primary }}>{leaving ? 'Cerrando sesión...' : 'Cambiar cuenta'}</Text>

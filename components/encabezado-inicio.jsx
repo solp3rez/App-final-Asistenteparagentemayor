@@ -1,22 +1,21 @@
 import { Image, Pressable, Text, View, StyleSheet } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { Bell } from 'lucide-react-native'
+import { Bell, UserRound } from 'lucide-react-native'
 import { colors, fonts, alpha } from '../lib/tema'
-import { getAvatar } from '../lib/avatares'
 
-export function HomeHeader() {
+export function HomeHeader({ nombre, foto, onPerfil }) {
   const insets = useSafeAreaInsets()
 
   return (
     <View style={[styles.header, { paddingTop: insets.top + 16 }]}>
       <View style={styles.row}>
-        <View style={styles.user}>
-          <Image source={getAvatar('ana')} accessibilityLabel="Foto de Ana" style={styles.avatar} />
+        <Pressable onPress={onPerfil} accessibilityRole="button" accessibilityLabel="Editar mi perfil" style={styles.user}>
+          {foto ? <Image source={{ uri: foto }} accessibilityLabel="Tu foto de perfil" style={styles.avatar} /> : <View style={[styles.avatar, styles.avatarVacio]}><UserRound size={25} color={colors.primaryForeground} /></View>}
           <View>
             <Text style={styles.hello}>Hola,</Text>
-            <Text style={styles.name}>Ana</Text>
+            <Text style={styles.name}>{nombre || 'Familiar'}</Text>
           </View>
-        </View>
+        </Pressable>
         <Pressable
           accessibilityRole="button"
           accessibilityLabel="Ver notificaciones"
@@ -53,6 +52,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: alpha(colors.primaryForeground, 0.4),
   },
+  avatarVacio: { alignItems: 'center', justifyContent: 'center', backgroundColor: alpha(colors.primaryForeground, 0.15) },
   hello: { fontFamily: fonts.body, fontSize: 14, color: alpha(colors.primaryForeground, 0.7) },
   name: {
     fontFamily: fonts.displaySemibold,
