@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { useFonts, Inter_400Regular, Inter_500Medium, Inter_600SemiBold } from '@expo-google-fonts/inter'
 import { Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold } from '@expo-google-fonts/poppins'
 import { colors } from '../lib/tema'
+import { VigilanteAlertas } from '../components/vigilante-alertas'
 import '../lib/conexion-mqtt'
 
 SplashScreen.preventAutoHideAsync()
@@ -29,6 +30,7 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <StatusBar style="dark" />
+      <VigilanteAlertas />
       <Stack
         screenOptions={{
           headerShown: false,

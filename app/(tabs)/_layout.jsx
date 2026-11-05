@@ -60,7 +60,7 @@ export default function TabsLayout() {
         name="alertas"
         options={{
           title: 'Alertas',
-          tabBarIcon: ({ color }) => <TabIcon icon={Bell} color={color} badge />,
+          tabBarIcon: ({ color }) => <TabIcon icon={Bell} color={color} />,
         }}
       />
       <Tabs.Screen

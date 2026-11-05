@@ -4,12 +4,10 @@ import { colors, fonts, radius, cardStyle } from '../lib/tema'
 import { getAvatar } from '../lib/avatares'
 
 // Person = { name, relation, avatar (clave), status: 'ok' | 'waiting' | 'help' }
-const defaultPeople = [
-  { name: 'Rosa', relation: 'Mamá', avatar: 'rosa', status: 'help' },
-  { name: 'Carlos', relation: 'Papá', avatar: 'carlos', status: 'ok' },
-]
+const defaultPeople = []
 
 const statusMeta = {
+  unknown: { label: 'Estado no confirmado', color: colors.mutedForeground },
   ok: { label: 'Todo bien', color: colors.ok },
   waiting: { label: 'Esperando respuesta', color: colors.primary },
   help: { label: '¡Ayuda!', color: colors.warn },
@@ -27,7 +25,7 @@ export function LinkedPeople({ people = defaultPeople }) {
 
       <View style={{ gap: 12 }}>
         {people.map((person) => {
-          const meta = statusMeta[person.status]
+          const meta = statusMeta[person.status] || statusMeta.unknown
           return (
             <Pressable
               key={person.name}

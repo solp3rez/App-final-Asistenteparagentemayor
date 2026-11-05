@@ -1,96 +1,106 @@
-import { Linking, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native'
-import { TriangleAlert, CheckCircle2, PhoneCall } from 'lucide-react-native'
+import { useCallback, useRef, useState } from 'react'
+import { ActivityIndicator, Pressable, ScrollView, Text, View, StyleSheet } from 'react-native'
+import { useFocusEffect } from 'expo-router'
+import { TriangleAlert } from 'lucide-react-native'
 import { colors, fonts, radius, alpha, cardStyle } from '../../lib/tema'
+import { consultarAlertas, fechaAlerta } from '../../lib/alertas'
 import { IconBox } from '../../components/ui/caja-icono'
 import { ScreenHeader } from '../../components/encabezado-pantalla'
 
-const alerts = [
-  { id: '1', person: 'Rosa', kind: 'help', text: 'Pidió ayuda desde el parlante.', time: 'Hace 5 min' },
-  { id: '2', person: 'Carlos', kind: 'resolved', text: 'Alerta resuelta, todo en orden.', time: 'Ayer, 18:40' },
-  { id: '3', person: 'Rosa', kind: 'resolved', text: 'Confirmó que tomó la medicación.', time: 'Ayer, 09:05' },
-]
-
 export default function AlertasPage() {
+  const [items, setItems] = useState([])
+  const [pagina, setPagina] = useState(1)
+  const [totalPaginas, setTotalPaginas] = useState(0)
+  const [cargando, setCargando] = useState(false)
+  const [error, setError] = useState('')
+  const [listo, setListo] = useState(false)
+  const ocupado = useRef(false)
+  const paginaActual = useRef(1)
+  const activo = useRef(false)
+
+  const cargar = useCallback(async (numero = 1) => {
+    if (ocupado.current) return
+    ocupado.current = true
+    setCargando(true)
+    try {
+      const resultado = await consultarAlertas({ pagina: numero })
+      if (!activo.current) return
+      setItems(anteriores => numero === 1 ? resultado.items : [...anteriores, ...resultado.items])
+      paginaActual.current = numero
+      setPagina(numero)
+      setTotalPaginas(resultado.totalPaginas || 0)
+      setError('')
+      setListo(true)
+    } catch (_) {
+      if (activo.current) {
+        setError('No se pudo consultar el historial. Revisá tu conexión y volvé a intentar.')
+        setListo(true)
+      }
+    } finally {
+      ocupado.current = false
+      if (activo.current) setCargando(false)
+    }
+  }, [])
+
+  useFocusEffect(useCallback(() => {
+    activo.current = true
+    paginaActual.current = 1
+    setItems([])
+    setListo(false)
+    cargar(1)
+    // Actualizar la primera página mientras la pantalla está abierta.
+    const intervalo = setInterval(() => {
+      if (paginaActual.current === 1) cargar(1)
+    }, 5000)
+    return () => {
+      activo.current = false
+      clearInterval(intervalo)
+    }
+  }, [cargar]))
+
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
-      <ScreenHeader title="Alertas" subtitle="Avisos del parlante" backHref="/inicio" />
-
-      <ScrollView
-        contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32, gap: 12 }}
-        showsVerticalScrollIndicator={false}
-      >
-        {alerts.map((a) => {
-          const help = a.kind === 'help'
-          return (
-            <View
-              key={a.id}
-              style={[
-                styles.card,
-                help && {
-                  borderColor: alpha(colors.warn, 0.3),
-                  backgroundColor: alpha(colors.warn, 0.1),
-                },
-              ]}
-            >
-              <View style={{ flexDirection: 'row', alignItems: 'flex-start', gap: 12 }}>
-                <IconBox
-                  size={44}
-                  radius={radius.xl}
-                  bg={help ? colors.warn : alpha(colors.ok, 0.15)}
-                >
-                  {help ? (
-                    <TriangleAlert size={24} color={colors.warnForeground} />
-                  ) : (
-                    <CheckCircle2 size={24} color={colors.ok} />
-                  )}
-                </IconBox>
-                <View style={{ flex: 1 }}>
-                  <View style={styles.titleRow}>
-                    <Text style={styles.person}>{a.person}</Text>
-                    <Text style={styles.time}>{a.time}</Text>
-                  </View>
-                  <Text style={styles.text}>{a.text}</Text>
-                  {help && (
-                    <Pressable
-                      accessibilityRole="link"
-                      onPress={() => Linking.openURL('tel:911')}
-                      style={({ pressed }) => [styles.call, pressed && { opacity: 0.9 }]}
-                    >
-                      <PhoneCall size={16} color={colors.warnForeground} />
-                      <Text style={styles.callText}>Llamar ahora</Text>
-                    </Pressable>
-                  )}
-                </View>
-              </View>
+      <ScreenHeader title="Alertas" subtitle="Historial de pedidos de ayuda" backHref="/inicio" />
+      <ScrollView contentContainerStyle={styles.contenido}>
+        <Pressable accessibilityRole="button" onPress={() => cargar(1)} disabled={cargando}>
+          <Text style={styles.enlace}>{cargando ? 'Actualizando…' : 'Actualizar historial'}</Text>
+        </Pressable>
+        {cargando && !listo ? <ActivityIndicator accessibilityLabel="Cargando alertas" /> : null}
+        {!!error && <Text accessibilityRole="alert" style={styles.error}>{error}</Text>}
+        {listo && !error && items.length === 0 ? (
+          <Text style={styles.texto}>Todavía no hay alertas registradas.</Text>
+        ) : null}
+        {items.map(item => (
+          <View key={item.id} style={styles.tarjeta}>
+            <IconBox size={44} radius={radius.xl} bg={colors.warn}>
+              <TriangleAlert size={24} color={colors.warnForeground} />
+            </IconBox>
+            <View style={{ flex: 1 }}>
+              <Text style={styles.persona}>{item.persona || 'Persona vinculada'}</Text>
+              <Text style={styles.texto}>{item.mensaje}</Text>
+              <Text style={styles.fecha}>{fechaAlerta(item.fecha)}</Text>
             </View>
-          )
-        })}
+          </View>
+        ))}
+        {pagina < totalPaginas ? (
+          <Pressable accessibilityRole="button" onPress={() => cargar(pagina + 1)} disabled={cargando}>
+            <Text style={styles.enlace}>{cargando ? 'Cargando…' : 'Cargar alertas anteriores'}</Text>
+          </Pressable>
+        ) : null}
       </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  card: { ...cardStyle, borderRadius: radius['2xl'], padding: 16 },
-  titleRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    gap: 8,
+  contenido: { paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32, gap: 12 },
+  tarjeta: {
+    ...cardStyle, borderRadius: radius['2xl'], padding: 16, flexDirection: 'row', gap: 12,
+    borderColor: alpha(colors.warn, 0.3), backgroundColor: alpha(colors.warn, 0.1),
   },
-  person: { fontFamily: fonts.displayBold, fontSize: 14, color: colors.foreground },
-  time: { fontFamily: fonts.body, fontSize: 12, color: colors.mutedForeground },
-  text: { marginTop: 2, fontFamily: fonts.body, fontSize: 14, color: colors.mutedForeground },
-  call: {
-    marginTop: 12,
-    alignSelf: 'flex-start',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-    backgroundColor: colors.warn,
-    borderRadius: radius.xl,
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-  },
-  callText: { fontFamily: fonts.bodySemibold, fontSize: 14, color: colors.warnForeground },
+  persona: { fontFamily: fonts.displayBold, fontSize: 14, color: colors.foreground },
+  texto: { marginTop: 2, fontFamily: fonts.body, fontSize: 14, color: colors.mutedForeground },
+  fecha: { marginTop: 6, fontFamily: fonts.body, fontSize: 12, color: colors.mutedForeground },
+  enlace: { color: colors.primary, fontFamily: fonts.bodySemibold, paddingVertical: 8 },
+  error: { color: '#B42318', fontFamily: fonts.body, fontSize: 14 },
 })

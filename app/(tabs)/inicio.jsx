@@ -140,7 +140,7 @@ export default function HomePage() {
                   name: person.name,
                   relation: person.relation,
                   avatar: person.avatar,
-                  status: 'ok',
+                  status: 'unknown',
                 },
               ]}
             />
