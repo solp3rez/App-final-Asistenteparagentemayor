@@ -13,6 +13,9 @@ import {
   Plus,
 } from 'lucide-react-native'
 import { colors, fonts, radius, alpha, cardStyle } from '../lib/tema'
+import { getLinkedPerson } from '../lib/persona'
+import { ErrorSesion, exigirSesion } from '../lib/sesion'
+import { consultarProgramados } from '../lib/programados-pocketbase'
 import { getAvatar } from '../lib/avatares'
 import {
   getScheduled,
@@ -28,25 +31,54 @@ import { ScreenHeader } from './encabezado-pantalla'
 export function ScheduledMessages() {
   const router = useRouter()
   const [items, setItems] = useState([])
+  const [guardados, setGuardados] = useState([])
+  const [mas, setMas] = useState(false)
+  const [personaId, setPersonaId] = useState('')
+  const [usuarioId, setUsuarioId] = useState('')
+  const [error, setError] = useState('')
   const [ready, setReady] = useState(false)
   const [editingId, setEditingId] = useState(null)
   const [editDate, setEditDate] = useState('')
   const [editTime, setEditTime] = useState('')
 
-  // Las pestañas quedan montadas, así que recargamos cada vez que la pantalla toma foco
-  useFocusEffect(
-    useCallback(() => {
-      let active = true
-      getScheduled().then((list) => {
-        if (!active) return
-        setItems(list)
-        setReady(true)
-      })
-      return () => {
-        active = false
-      }
-    }, []),
-  )
+  useFocusEffect(useCallback(() => {
+    let activo = true
+    setReady(false)
+    setItems([])
+    setGuardados([])
+    setError('')
+    async function cargar() {
+      try {
+        const sesion = await exigirSesion()
+        const persona = await getLinkedPerson()
+        const locales = await getScheduled()
+        const actual = await exigirSesion()
+        if (actual.usuarioId !== sesion.usuarioId) throw new ErrorSesion()
+        if (!activo) return
+        setUsuarioId(sesion.usuarioId)
+        setPersonaId(persona?.id || '')
+        // Los recordatorios antiguos se conservan; se muestran solo los de la persona vinculada.
+        setItems(Array.isArray(locales) && persona ? locales.filter(m => m.recipientId === persona.id) : [])
+        const resultado = await consultarProgramados()
+        if (!activo) return
+        setGuardados(resultado.items)
+        setMas(resultado.mas)
+      } catch (e) {
+        if (!activo) return
+        if (e instanceof ErrorSesion) router.replace('/iniciar-sesion')
+        else setError('No se pudo cargar el historial. Revisá la conexión y volvé a abrir esta pantalla.')
+      } finally { if (activo) setReady(true) }
+    }
+    cargar()
+    return () => { activo = false }
+  }, [router]))
+
+  async function comprobarCuenta() {
+    const sesion = await exigirSesion()
+    const persona = await getLinkedPerson()
+    if (sesion.usuarioId !== usuarioId || !persona || persona.id !== personaId) throw new ErrorSesion()
+    return persona
+  }
 
   function startEdit(m) {
     setEditingId(m.id)
@@ -55,21 +87,29 @@ export function ScheduledMessages() {
   }
 
   async function saveEdit(id) {
-    await updateScheduled(id, { date: editDate, time: editTime })
-    setItems(await getScheduled())
-    setEditingId(null)
+    try {
+      await comprobarCuenta()
+      await updateScheduled(id, { date: editDate, time: editTime })
+      const list = await getScheduled()
+      setItems(list.filter(m => m.recipientId === personaId))
+      setEditingId(null)
+    } catch (_) { setError('No se pudo editar. Volvé a abrir esta pantalla.') }
   }
 
   async function cancel(id) {
-    await removeScheduled(id)
-    setItems(await getScheduled())
+    try {
+      await comprobarCuenta()
+      await removeScheduled(id)
+      const list = await getScheduled()
+      setItems(list.filter(m => m.recipientId === personaId))
+    } catch (_) { setError('No se pudo eliminar. Volvé a abrir esta pantalla.') }
   }
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <ScreenHeader
         title="Mensajes programados"
-        subtitle="Se reproducen en el parlante de tu ser querido"
+        subtitle="Guardados para tu persona vinculada"
         backHref="/inicio"
       />
 
@@ -77,7 +117,35 @@ export function ScheduledMessages() {
         contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32 }}
         showsVerticalScrollIndicator={false}
       >
-        {ready && items.length === 0 && (
+        <Button
+          label="Programar mensaje"
+          icon={Plus}
+          height={36}
+          radius={radius['2xl']}
+          fontSize={14}
+          weight="medium"
+          onPress={() => router.push('/programar-mensaje')}
+        />
+        <Text style={{ color: colors.mutedForeground, fontFamily: fonts.body, marginTop: 12, marginBottom: 12 }}>
+          Todavía falta conectar el envío automático a la Raspberry.
+        </Text>
+        {!!error && <Text accessibilityRole="alert" style={{ color: '#B42318', marginBottom: 12 }}>{error}</Text>}
+        {!ready && <Text style={{ color: colors.mutedForeground }}>Cargando...</Text>}
+        {guardados.length > 0 && (
+          <View style={{ gap: 12, marginBottom: 20 }}>
+            <Text style={{ fontFamily: fonts.bodySemibold, color: colors.foreground }}>Guardados en PocketBase</Text>
+            {guardados.map(m => (
+              <View key={m.id} style={styles.card}>
+                <Text style={styles.name}>{m.recipientName || 'Persona vinculada'}</Text>
+                <Text style={styles.message}>{m.message || m.texto}</Text>
+                <Text style={styles.message}>{formatWhen(m.date, m.time)} · Una vez</Text>
+                <Text style={styles.message}>Guardado. Envío automático aún no conectado.</Text>
+              </View>
+            ))}
+            {mas && <Text style={styles.message}>Se muestran los 100 registros más recientes.</Text>}
+          </View>
+        )}
+        {ready && !error && items.length === 0 && guardados.length === 0 && (
           <View style={styles.empty}>
             <View style={styles.emptyIcon}>
               <CalendarClock size={32} color={colors.primary} />
@@ -85,23 +153,16 @@ export function ScheduledMessages() {
             <View>
               <Text style={styles.emptyTitle}>No hay mensajes programados</Text>
               <Text style={styles.emptyText}>
-                Programá un recordatorio o saludo para que suene automáticamente.
+                Todavía no hay recordatorios guardados para esta cuenta.
               </Text>
             </View>
-            <Button
-              label="Programar mensaje"
-              icon={Plus}
-              height={36}
-              radius={radius['2xl']}
-              fontSize={14}
-              weight="medium"
-              onPress={() => router.push('/mensaje')}
-            />
           </View>
         )}
 
         {items.length > 0 && (
           <View style={{ gap: 12 }}>
+            <Text style={{ fontFamily: fonts.bodySemibold, color: colors.foreground }}>Guardados solo en este celular</Text>
+            <Text style={{ fontFamily: fonts.body, color: colors.mutedForeground }}>Estos recordatorios anteriores no se envían automáticamente.</Text>
             {items.map((m) => {
               const isEditing = editingId === m.id
               return (
