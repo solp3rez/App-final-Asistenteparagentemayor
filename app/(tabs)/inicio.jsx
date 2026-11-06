@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { ActivityIndicator, Pressable, ScrollView, Text, View } from 'react-native'
 import { useFocusEffect, useNavigation, useRouter } from 'expo-router'
 import { colors } from '../../lib/tema'
@@ -22,6 +23,7 @@ export default function HomePage() {
   const tabBarStyle = useTabBarStyle()
   const [view, setView] = useState('loading') // 'loading' | 'empty' | 'linking' | 'linked'
   const [person, setPerson] = useState(null)
+  const [usuario, setUsuario] = useState(null)
   const [speaker, setSpeaker] = useState(null)
   const [speakerError, setSpeakerError] = useState('')
   const [error, setError] = useState('')
@@ -39,7 +41,7 @@ export default function HomePage() {
       setView('loading')
       async function cargar() {
         try {
-          await verificarSesion()
+          const cuenta = await verificarSesion()
           const saved = await getLinkedPerson()
           let linkedSpeaker = null
           let speakerProblem = ''
@@ -53,10 +55,19 @@ export default function HomePage() {
             }
           }
           if (!active) return
+          setUsuario(cuenta)
           setPerson(saved)
           setSpeaker(linkedSpeaker)
           setSpeakerError(speakerProblem)
-          setView(saved ? 'linked' : 'empty')
+          setView(saved ? (speakerProblem ? 'speakerError' : linkedSpeaker?.activo === true ? 'linked' : 'pending') : 'empty')
+          // Una bienvenida por cuenta y dispositivo; el perfil sigue disponible en Ajustes.
+          const claveBienvenida = `cerca.bienvenida.${cuenta.id}`
+          try {
+            if (!(await AsyncStorage.getItem(claveBienvenida)) && active) {
+              await AsyncStorage.setItem(claveBienvenida, '1')
+              if (active) router.push('/perfil')
+            }
+          } catch (_) { /* No bloquea el inicio si falla el almacenamiento local. */ }
         } catch (error) {
           if (!active) return
           if (error instanceof ErrorSesion) {
@@ -96,7 +107,7 @@ export default function HomePage() {
   async function completeLink(linked) {
     const saved = await saveLinkedPerson(linked)
     setPerson(saved)
-    setView('linked')
+    setView('pending')
     // Siguiente paso: el identificador del parlante y el código del correo.
     router.push('/vincular-parlante')
   }
@@ -116,12 +127,8 @@ export default function HomePage() {
   return (
     <View style={{ flex: 1, backgroundColor: colors.background }}>
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }} showsVerticalScrollIndicator={false}>
-        <HomeHeader />
-        <View style={{ paddingHorizontal: 20, alignItems: 'flex-end', marginBottom: 12 }}>
-          <Pressable onPress={cambiarCuenta} disabled={leaving} accessibilityRole="button" style={{ padding: 10 }}>
-            <Text style={{ color: colors.primary }}>{leaving ? 'Cerrando sesión...' : 'Cambiar cuenta'}</Text>
-          </Pressable>
-        </View>
+        <HomeHeader usuario={usuario} />
+
         {error ? <Text accessibilityRole="alert" style={{ color: '#B42318', paddingHorizontal: 20, marginBottom: 12 }}>{error}</Text> : null}
         {view === 'error' && (
           <Pressable onPress={() => setRetry(value => value + 1)} accessibilityRole="button" style={{ padding: 20 }}>
@@ -129,14 +136,23 @@ export default function HomePage() {
           </Pressable>
         )}
         {view === 'empty' && <EmptyHome onStart={() => setView('linking')} />}
+        {view === 'pending' && (
+          <View style={{padding: 24, gap: 16}}>
+            <Text style={{color: colors.foreground, fontSize: 20}}>Terminá de vincular a {person?.name}</Text>
+            <Text style={{color: colors.mutedForeground}}>Tus datos están guardados. Falta vincular el parlante y confirmar el código del correo.</Text>
+            <SpeakerStatusCard speaker={speaker} onLink={() => router.push('/vincular-parlante')} />
+          </View>
+        )}
+        {view === 'speakerError' && <View style={{padding: 24, gap: 12}}><Text style={{color: colors.warn}}>{speakerError}</Text><Pressable onPress={() => setRetry(v => v + 1)}><Text style={{color: colors.primary}}>Volver a intentar</Text></Pressable></View>}
         {view === 'linked' && person && (
           <View style={{ gap: 24, paddingHorizontal: 20, paddingTop: 4 }}>
-            <AlertBanner onPress={() => router.navigate('/alertas')} />
             <SpeakerStatusCard speaker={speaker} loadError={speakerError} onLink={() => router.push('/vincular-parlante')} />
+            <AlertBanner onPress={() => router.navigate('/alertas')} />
             <QuickActions />
             <LinkedPeople
               people={[
                 {
+                  id: person.id,
                   name: person.name,
                   relation: person.relation,
                   avatar: person.avatar,

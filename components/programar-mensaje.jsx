@@ -88,8 +88,8 @@ export function ProgramarMensaje() {
         {guardado ? (
           <>
             <Text style={styles.title}>Recordatorio guardado</Text>
-            <Text style={styles.body}>Quedó guardado en PocketBase. Todavía falta conectar el envío a la Raspberry.</Text>
-            <Button label="Volver al inicio" onPress={() => router.replace('/inicio')} />
+            <Text style={styles.body}>Quedó programado para la fecha y hora elegidas.</Text>
+            <Button label="Ver conversación" onPress={() => router.replace('/chat')} />
           </>
         ) : (
           <>
@@ -105,7 +105,7 @@ export function ProgramarMensaje() {
                 <Text style={styles.label}>Hora</Text>
                 <DateTimeField mode="time" value={hora} onChange={setHora} accessibilityLabel="Elegir hora" />
                 <Text style={styles.body}>Se guarda para una sola vez. Usá la hora de tu celular.</Text>
-                <Text style={styles.body}>Por ahora el envío a la Raspberry todavía no está conectado.</Text>
+                <Text style={styles.body}>Si el servidor está apagado a esa hora, el mensaje no se enviará después.</Text>
                 <Button label={guardando ? 'Guardando...' : 'Guardar recordatorio'} onPress={guardar} disabled={guardando || !texto.trim()} />
               </>
             ) : null}

@@ -1,5 +1,3 @@
-import { ScheduledMessages } from '../../components/mensajes-programados'
+import Vinculos from '../vinculos'
 
-export default function ProgramadosPage() {
-  return <ScheduledMessages />
-}
+export default function ProgramadosPage() { return <Vinculos /> }

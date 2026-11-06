@@ -127,13 +127,13 @@ export function ScheduledMessages() {
           onPress={() => router.push('/programar-mensaje')}
         />
         <Text style={{ color: colors.mutedForeground, fontFamily: fonts.body, marginTop: 12, marginBottom: 12 }}>
-          Todavía falta conectar el envío automático a la Raspberry.
+          Si el servidor está apagado a la hora elegida, el mensaje no se enviará después.
         </Text>
         {!!error && <Text accessibilityRole="alert" style={{ color: '#B42318', marginBottom: 12 }}>{error}</Text>}
         {!ready && <Text style={{ color: colors.mutedForeground }}>Cargando...</Text>}
         {guardados.length > 0 && (
           <View style={{ gap: 12, marginBottom: 20 }}>
-            <Text style={{ fontFamily: fonts.bodySemibold, color: colors.foreground }}>Guardados en PocketBase</Text>
+            <Text style={{ fontFamily: fonts.bodySemibold, color: colors.foreground }}>Tus mensajes programados</Text>
             {guardados.map(m => (
               <View key={m.id} style={styles.card}>
                 <Text style={styles.name}>{m.recipientName || 'Persona vinculada'}</Text>

@@ -14,7 +14,7 @@ import {
 import { colors, fonts, radius, alpha, cardStyle } from '../lib/tema'
 import { getAvatar } from '../lib/avatares'
 import { getLinkedPerson, clearLinkedPerson } from '../lib/persona'
-import { ErrorSesion } from '../lib/sesion'
+import { cerrarSesion, ErrorSesion } from '../lib/sesion'
 import { Button } from './ui/boton'
 import { IconBox } from './ui/caja-icono'
 import { ScreenHeader } from './encabezado-pantalla'
@@ -106,6 +106,11 @@ export function SettingsView() {
         contentContainerStyle={{ paddingHorizontal: 20, paddingTop: 12, paddingBottom: 32, gap: 24 }}
         showsVerticalScrollIndicator={false}
       >
+        <View style={{gap: 12}}>
+          <Text style={styles.sectionTitle}>Mi cuenta</Text>
+          <Button label="Editar mi perfil" variant="secondary" onPress={() => router.push('/perfil')} />
+          <Button label="Cerrar sesión" variant="secondary" onPress={async () => { await cerrarSesion(); router.replace('/iniciar-sesion') }} />
+        </View>
         <View>
           <Text style={styles.sectionTitle}>Persona vinculada</Text>
           {!ready && <Text style={styles.emptyText}>Cargando datos...</Text>}
@@ -125,7 +130,7 @@ export function SettingsView() {
                 </View>
                 <View style={styles.badge}>
                   <Speaker size={14} color={colors.ok} />
-                  <Text style={styles.badgeText}>Vinculado</Text>
+                  <Text style={styles.badgeText}>Datos guardados</Text>
                 </View>
               </View>
 

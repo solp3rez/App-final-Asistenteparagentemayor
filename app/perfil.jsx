@@ -1,0 +1,19 @@
+import { useCallback, useState } from 'react'
+import { Image, Pressable, ScrollView, Text, TextInput, View } from 'react-native'
+import { useFocusEffect, useRouter } from 'expo-router'
+import { ScreenHeader } from '../components/encabezado-pantalla'
+import { Button } from '../components/ui/boton'
+import { verificarSesion, pbRequest } from '../lib/conexion-pocketbase'
+import { exigirSesion, ErrorSesion } from '../lib/sesion'
+import { opcionesPerfil, leerAvatarPerfil, guardarAvatarPerfil } from '../lib/perfil-local'
+import { getAvatar } from '../lib/avatares'
+import { colors, fonts, radius, cardStyle } from '../lib/tema'
+export default function Perfil() {
+ const router=useRouter(); const [usuario,setUsuario]=useState(null); const [nombre,setNombre]=useState(''); const [avatar,setAvatar]=useState('ana'); const [error,setError]=useState(''); const [mensaje,setMensaje]=useState(''); const [busy,setBusy]=useState(false)
+ useFocusEffect(useCallback(()=>{let activo=true; async function cargar(){try {const u=await verificarSesion(); const a=await leerAvatarPerfil(u.id); if(activo){setUsuario(u);setNombre(u.nombre||'');setAvatar(a);setError('');setMensaje('')}}catch(e){if(activo){if(e instanceof ErrorSesion)router.replace('/iniciar-sesion');else setError('No se pudo cargar tu perfil.')}}} cargar();return()=>{activo=false}},[router]))
+ async function guardar(){ if(busy||!usuario)return; const n=nombre.trim(); if(!n){setError('Escribí tu nombre.');return} setBusy(true);setError('');setMensaje('');try {const s=await exigirSesion(); if(s.usuarioId!==usuario.id)throw new ErrorSesion(); if(n!==usuario.nombre){const u=await pbRequest('usuarios',{method:'PATCH',recordId:usuario.id,body:{nombre:n}}); if(u.id!==usuario.id || u.nombre!==n)throw new Error('No se pudo confirmar el cambio de nombre.');setUsuario(u)} await guardarAvatarPerfil(usuario.id,avatar);setMensaje('Perfil guardado.')}catch(e){if(e instanceof ErrorSesion)router.replace('/iniciar-sesion');else setError(e.status===403?'PocketBase no permite cambiar el nombre de esta cuenta.':e.message||'No se pudo guardar el perfil.')}finally{setBusy(false)}}
+ return <View style={{flex:1,backgroundColor:colors.background}}><ScreenHeader title="Mi perfil" subtitle="Tu información" backHref="/ajustes"/><ScrollView keyboardShouldPersistTaps="handled" contentContainerStyle={{padding:20,gap:16,paddingBottom:40}}>
+ <View style={{...cardStyle,padding:20,borderRadius:radius['2xl'],gap:12}}><Text style={{fontFamily:fonts.displaySemibold,color:colors.foreground,fontSize:18}}>Hola, bienvenida</Text><Text style={{fontFamily:fonts.bodySemibold,color:colors.foreground}}>Tu nombre</Text><TextInput value={nombre} onChangeText={setNombre} placeholder="Escribí tu nombre" maxLength={80} editable={!busy} style={{borderWidth:1,borderColor:colors.border,borderRadius:14,padding:12,color:colors.foreground}}/><Text style={{color:colors.mutedForeground}}>Vínculo: {usuario?.relacion || 'No indicado'}</Text></View>
+ <Text style={{fontFamily:fonts.bodySemibold,color:colors.foreground}}>Elegí tu imagen</Text><View style={{flexDirection:'row',flexWrap:'wrap',gap:12}}>{opcionesPerfil.map(k=><Pressable key={k} accessibilityRole="button" accessibilityLabel={'Elegir imagen '+k} accessibilityState={{selected:avatar===k}} onPress={()=>setAvatar(k)} style={{borderWidth:avatar===k?3:1,borderColor:avatar===k?colors.primary:colors.border,borderRadius:38,padding:3}}><Image source={getAvatar(k)} style={{height:58,width:58,borderRadius:29}}/></Pressable>)}</View>
+ <Text style={{color:colors.mutedForeground}}>La imagen elegida se guarda en este celular.</Text>{error?<Text accessibilityRole="alert" style={{color:colors.warn}}>{error}</Text>:null}{mensaje?<Text style={{color:colors.ok}}>{mensaje}</Text>:null}<Button label={busy?'Guardando...':'Guardar perfil'} disabled={!usuario||busy} onPress={guardar}/></ScrollView></View>
+}

@@ -12,7 +12,7 @@ export function EmptyHome({ onStart }) {
 
       <Text style={styles.title}>Todavía no hay nada vinculado</Text>
       <Text style={styles.text}>
-        Para empezar, conectá tu parlante y vinculá a la persona que vas a acompañar.
+        Primero contanos a quién vas a acompañar. Después vinculás y activás el parlante.
       </Text>
 
       <View style={styles.steps}>
@@ -21,8 +21,8 @@ export function EmptyHome({ onStart }) {
             <Speaker size={20} color={colors.primary} />
           </IconBox>
           <View style={{ flex: 1 }}>
-            <Text style={styles.stepTitle}>Conectá el parlante</Text>
-            <Text style={styles.stepText}>Enchufalo y conectalo a tu red wifi.</Text>
+            <Text style={styles.stepTitle}>Datos de la persona mayor</Text>
+            <Text style={styles.stepText}>Escribí su nombre y elegí una imagen.</Text>
           </View>
         </View>
         <View style={styles.step}>
@@ -30,8 +30,8 @@ export function EmptyHome({ onStart }) {
             <UserPlus size={20} color={colors.primary} />
           </IconBox>
           <View style={{ flex: 1 }}>
-            <Text style={styles.stepTitle}>Vinculá a la persona</Text>
-            <Text style={styles.stepText}>Asociá el parlante con tu ser querido.</Text>
+            <Text style={styles.stepTitle}>Vinculá el parlante</Text>
+            <Text style={styles.stepText}>Ingresá su identificador y confirmá el código.</Text>
           </View>
         </View>
       </View>
@@ -47,7 +47,7 @@ export function EmptyHome({ onStart }) {
 
       <View style={styles.secure}>
         <ShieldCheck size={16} color={colors.ok} />
-        <Text style={styles.secureText}>Conexión segura y privada</Text>
+        <Text style={styles.secureText}>Podés completar los pasos de a poco</Text>
       </View>
     </View>
   )

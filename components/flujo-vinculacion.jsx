@@ -16,13 +16,14 @@ import { getAvatar } from '../lib/avatares'
 import { IconBox } from './ui/caja-icono'
 
 // Son claves de dibujos locales, no personas ya registradas.
-const avatarOptions = ['rosa', 'carlos', 'ana']
+const avatarOptions = ['rosa', 'carlos', 'ana', 'luna', 'mar', 'sol', 'rio']
 
 // Conservamos el nombre y las propiedades que usa la pantalla de inicio.
 export function LinkFlow({ onCancel, onComplete }) {
   const insets = useSafeAreaInsets()
   const [name, setName] = useState('')
   const [avatar, setAvatar] = useState('')
+  const [relation, setRelation] = useState('')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
   const savingRef = useRef(false)
@@ -41,7 +42,7 @@ export function LinkFlow({ onCancel, onComplete }) {
     try {
       // El inicio guarda en PocketBase. No hacemos un segundo guardado acá.
       // Esto guarda el perfil; NO detecta ni conecta físicamente el parlante.
-      await onComplete({ name: cleanName, relation: '', avatar })
+      await onComplete({ name: cleanName, relation: relation.trim(), avatar })
     } catch (err) {
       setError('No se pudieron guardar los datos. Revisá la conexión y volvé a intentar.')
     } finally {
@@ -99,6 +100,8 @@ export function LinkFlow({ onCancel, onComplete }) {
             style={styles.input}
           />
 
+          <Text style={[styles.label, styles.avatarLabel]}>¿Qué vínculo tienen? (opcional)</Text>
+          <TextInput accessibilityLabel="Vínculo con la persona" value={relation} onChangeText={setRelation} editable={!saving} placeholder="Por ejemplo: mi mamá" placeholderTextColor={colors.mutedForeground} maxLength={60} style={styles.input} />
           <Text style={[styles.label, styles.avatarLabel]}>Imagen (opcional)</Text>
           <Text style={styles.help}>
             Elegí un dibujo. Si no elegís ninguno, se usa la imagen predeterminada.

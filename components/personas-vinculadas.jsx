@@ -1,5 +1,6 @@
 import { Image, Pressable, Text, View, StyleSheet } from 'react-native'
 import { ChevronRight } from 'lucide-react-native'
+import { useRouter } from 'expo-router'
 import { colors, fonts, radius, cardStyle } from '../lib/tema'
 import { getAvatar } from '../lib/avatares'
 
@@ -14,11 +15,12 @@ const statusMeta = {
 }
 
 export function LinkedPeople({ people = defaultPeople }) {
+  const router = useRouter()
   return (
     <View>
       <View style={styles.titleRow}>
         <Text style={styles.title}>Tus vínculos</Text>
-        <Pressable accessibilityRole="button">
+        <Pressable accessibilityRole="button" onPress={() => router.push('/vinculos')}>
           <Text style={styles.link}>Ver todos</Text>
         </Pressable>
       </View>
@@ -28,7 +30,8 @@ export function LinkedPeople({ people = defaultPeople }) {
           const meta = statusMeta[person.status] || statusMeta.unknown
           return (
             <Pressable
-              key={person.name}
+              key={person.id || person.name}
+              onPress={() => router.push('/chat')}
               accessibilityRole="button"
               style={({ pressed }) => [styles.card, pressed && { transform: [{ scale: 0.99 }] }]}
             >
@@ -38,12 +41,12 @@ export function LinkedPeople({ people = defaultPeople }) {
                   accessibilityLabel={`Foto de ${person.name}`}
                   style={styles.avatar}
                 />
-                <View style={[styles.statusDot, { backgroundColor: meta.color }]} />
+
               </View>
               <View style={{ flex: 1 }}>
                 <Text style={styles.name}>{person.name}</Text>
                 <Text style={styles.relation}>{person.relation}</Text>
-                <Text style={[styles.status, { color: meta.color }]}>{meta.label}</Text>
+
               </View>
               <ChevronRight size={20} color={colors.mutedForeground} />
             </Pressable>

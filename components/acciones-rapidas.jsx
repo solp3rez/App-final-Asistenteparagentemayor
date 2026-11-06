@@ -1,13 +1,12 @@
 import { Pressable, Text, View, StyleSheet } from 'react-native'
 import { useRouter } from 'expo-router'
-import { MessageCircle, Phone, BellRing } from 'lucide-react-native'
+import { MessageCircle, BellRing } from 'lucide-react-native'
 import { colors, fonts, radius, cardStyle } from '../lib/tema'
 import { IconBox } from './ui/caja-icono'
 
 const actions = [
-  { label: 'Enviar mensaje', icon: MessageCircle, bg: colors.primary, fg: colors.primaryForeground, href: '/mensaje' },
-  { label: 'Llamar', icon: Phone, bg: colors.ok, fg: colors.okForeground, href: '/inicio' },
-  { label: 'Alertas', icon: BellRing, bg: colors.warn, fg: colors.warnForeground, href: '/inicio' },
+  { label: 'Enviar mensaje', icon: MessageCircle, bg: colors.primary, fg: colors.primaryForeground, href: '/opciones-mensaje' },
+  { label: 'Alertas', icon: BellRing, bg: colors.warn, fg: colors.warnForeground, href: '/alertas' },
 ]
 
 export function QuickActions() {

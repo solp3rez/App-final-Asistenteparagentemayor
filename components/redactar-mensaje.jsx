@@ -109,12 +109,12 @@ export function MessageCompose() {
           <Check size={40} color={colors.ok} />
         </IconBox>
         <Text style={styles.resultTitle}>Mensaje guardado</Text>
-        <Text style={styles.resultText}>El mensaje para {person?.name || 'tu persona vinculada'} quedó guardado en PocketBase.</Text>
+        <Text style={styles.resultText}>El mensaje para {person?.name || 'tu persona vinculada'} quedó guardado.</Text>
         <View style={styles.notice}>
           <Clock size={20} color={colors.primary} />
-          <Text style={styles.noticeText}>Estado: pendiente de envío. Todavía no se envió por MQTT ni se confirmó su reproducción.</Text>
+          <Text style={styles.noticeText}>El mensaje está guardado. La reproducción todavía no se puede confirmar desde la app.</Text>
         </View>
-        <Button label="Volver al inicio" onPress={() => router.replace('/inicio')} style={{ width: '100%' }} />
+        <Button label="Ver conversación" onPress={() => router.replace('/chat')} style={{ width: '100%' }} />
       </View>
     )
   }
@@ -163,7 +163,7 @@ export function MessageCompose() {
             </View>
             <View style={styles.notice}>
               <Clock size={20} color={colors.primary} />
-              <Text style={styles.noticeText}>En este paso guardamos texto directo como pendiente. El envío por MQTT, los audios y la programación se conectarán después.</Text>
+              <Text style={styles.noticeText}>El servicio y el parlante deben estar encendidos. La app no confirma la reproducción.</Text>
             </View>
             {saveError ? <Text accessibilityRole="alert" style={styles.error}>{saveError}</Text> : null}
             <Button label={saving ? 'Guardando...' : 'Guardar mensaje'} onPress={handleSubmit} disabled={saving || !message.trim() || message.trim().length > 200} />
